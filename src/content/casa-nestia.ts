@@ -281,6 +281,6 @@ export const content = {
       rights: "All rights reserved.",
     },
   },
-} as const;
+};
 
 export type Copy = (typeof content)["fr"];
