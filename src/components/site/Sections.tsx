@@ -302,7 +302,7 @@ export function Vision({ copy }: { copy: Copy }) {
         loading="lazy"
         className="h-[560px] w-full object-cover md:h-[720px]"
       />
-      <div className="absolute inset-0 bg-anthracite/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-anthracite/80 via-anthracite/55 to-anthracite/30" />
       <div className="absolute inset-0 flex items-center">
         <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
           <div className="max-w-2xl">
