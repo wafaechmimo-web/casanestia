@@ -45,9 +45,9 @@ export function Nav({
             alt="Casa Nestia"
             width={72}
             height={72}
-            className={`w-auto mix-blend-multiply transition-all duration-500 ${solid ? "h-10" : "h-12"}`}
+            className={`w-auto transition-all duration-500 ${solid ? "h-10 mix-blend-multiply" : "h-14"}`}
           />
-          <span className="hidden text-[0.7rem] uppercase tracking-[0.34em] text-foreground/80 sm:inline">
+          <span className={`hidden text-[0.7rem] uppercase tracking-[0.34em] sm:inline ${solid ? "text-foreground/80" : "text-background/90"}`}>
             Casa Nestia
           </span>
         </a>
@@ -57,7 +57,7 @@ export function Nav({
             <a
               key={l.key}
               href={l.href}
-              className="link-underline text-[0.72rem] uppercase tracking-[0.22em] text-foreground/75 transition-colors hover:text-foreground"
+              className={`link-underline text-[0.72rem] uppercase tracking-[0.22em] transition-colors ${solid ? "text-foreground/75 hover:text-foreground" : "text-background/85 hover:text-background"}`}
             >
               {copy.nav[l.key]}
             </a>
@@ -74,8 +74,12 @@ export function Nav({
                   onClick={() => setLang(l)}
                   className={
                     lang === l
-                      ? "text-primary"
-                      : "text-muted-foreground transition-colors hover:text-foreground"
+                      ? solid
+                        ? "text-primary"
+                        : "text-rose-soft"
+                      : solid
+                        ? "text-muted-foreground transition-colors hover:text-foreground"
+                        : "text-background/60 transition-colors hover:text-background"
                   }
                   aria-pressed={lang === l}
                 >
@@ -95,10 +99,10 @@ export function Nav({
             aria-expanded={open}
           >
             <span
-              className={`block h-px w-6 bg-foreground transition-transform ${open ? "translate-y-[3px] rotate-45" : ""}`}
+              className={`block h-px w-6 transition-transform ${solid ? "bg-foreground" : "bg-background"} ${open ? "translate-y-[3px] rotate-45" : ""}`}
             />
             <span
-              className={`block h-px w-6 bg-foreground transition-transform ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
+              className={`block h-px w-6 transition-transform ${solid ? "bg-foreground" : "bg-background"} ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
             />
           </button>
         </div>
