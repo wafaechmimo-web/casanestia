@@ -16,13 +16,11 @@ export function Hero({ copy }: { copy: Copy }) {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-end px-6 pb-20 pt-36 md:px-10 md:pb-28">
         <div className="max-w-2xl fade-up">
-          <p className="text-[0.68rem] uppercase tracking-[0.34em] text-rose-soft">
-            {copy.hero.location}
-          </p>
-          <h1 className="mt-6 font-display text-[2.6rem] leading-[1.05] text-background sm:text-6xl md:text-7xl">
+          <h1 className="font-display text-[2.6rem] leading-[1.05] text-background sm:text-6xl md:text-7xl">
             {copy.hero.title}
           </h1>
           <div className="mt-7 h-px w-24 bg-gold/80" />
+
           <p className="mt-5 text-[0.72rem] uppercase tracking-[0.28em] text-background/80">
             {copy.hero.tagline}
           </p>
