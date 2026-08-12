@@ -49,33 +49,8 @@ export function Story({ copy }: { copy: Copy }) {
   );
 }
 
-export function Founder({ copy }: { copy: Copy }) {
-  return (
-    <section className="border-y border-border bg-secondary/60">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-24 md:grid-cols-12 md:gap-16 md:px-10 md:py-36">
-        <div className="md:col-span-6">
-          <p className="eyebrow">{copy.founder.eyebrow}</p>
-          <h2 className="mt-6 max-w-lg font-display text-[1.9rem] leading-[1.15] md:text-[2.6rem]">
-            {copy.founder.title}
-          </h2>
-          <p className="mt-8 max-w-xl text-[0.97rem] leading-[1.9] text-muted-foreground">
-            {copy.founder.body}
-          </p>
-        </div>
-        <div className="md:col-span-5 md:col-start-8">
-          <img
-            src={founderImg}
-            alt="Bureau baigné de lumière dans un intérieur marocain"
-            width={1200}
-            height={1408}
-            loading="lazy"
-            className="h-[340px] w-full object-cover md:h-[520px]"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
 
 export function Expertise({ copy }: { copy: Copy }) {
   return (
