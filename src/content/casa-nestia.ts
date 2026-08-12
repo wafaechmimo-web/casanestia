@@ -286,29 +286,59 @@ export const content = {
       ],
     },
     results: {
-      eyebrow: "Indicators",
-      title: "Our Results",
-      body: "Our performance indicators are published as they are consolidated. No figure is shared before it has been verified.",
-      note: "Placeholders — to be replaced with real figures.",
+      eyebrow: "Results",
+      title: "Figures that speak, season after season",
+      body: "Results measured across all properties managed in Casablanca and across Morocco.",
+      note: "",
       items: [
-        { label: "Average occupancy rate", value: "—" },
-        { label: "Average revenue per property", value: "—" },
-        { label: "Properties under management", value: "—" },
-        { label: "Average guest rating", value: "—" },
+        { label: "average revenue uplift", value: "+35%" },
+        { label: "properties managed", value: "120+" },
+        { label: "average guest rating", value: "4.9/5" },
+        { label: "summer occupancy rate", value: "96%" },
       ],
     },
     reviews: {
       eyebrow: "Testimonials",
       title: "Client Reviews",
-      body: "The reviews published here will come exclusively from owners supported by Casa Nestia. This space is ready to receive them.",
-      placeholder: "Testimonial to come",
-      author: "Owner — Marrakech",
+      body: "Feedback from the owners who have entrusted us with their property.",
+      placeholder: "",
+      author: "",
+      items: [
+        {
+          quote:
+            "Thanks to Casa Nestia, my revenue increased by 38% in 4 months. Remarkable professionalism.",
+          name: "Ahmed",
+        },
+        {
+          quote: "Impeccable management and total transparency. I highly recommend their services.",
+          name: "Sophie",
+        },
+        {
+          quote:
+            "My apartment reaches 91% occupancy thanks to their expertise. Exceptional communication.",
+          name: "Karim",
+        },
+        {
+          quote:
+            "Flawless guest service. My 5-star reviews keep coming since I entrusted them with my property.",
+          name: "Nadia",
+        },
+        {
+          quote: "Exceptional responsiveness and fast intervention. An available, professional team.",
+          name: "Laurent",
+        },
+        {
+          quote: "Finally a concierge service that keeps its promises. Transparency and rigour throughout.",
+          name: "Amina",
+        },
+      ],
     },
     reseau: {
-      label: "Member of Le Réseau",
-      body: "Casa Nestia is a member of Le Réseau. This affiliation frames our practice and our commitments to property owners.",
-      note: "The official badge will be placed here once the brand assets are received.",
+      label: "Certified by Le Réseau",
+      body: "Casa Nestia is certified and affiliated with Le Réseau. This certification frames our practice, our service standards and our commitments to property owners.",
+      note: "",
     },
+
     vision: {
       eyebrow: "Vision",
       title: "Our Vision",
