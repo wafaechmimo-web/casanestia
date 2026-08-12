@@ -45,8 +45,9 @@ export function Nav({
             alt="Casa Nestia"
             width={72}
             height={72}
-            className={`w-auto transition-all duration-500 mix-blend-multiply ${solid ? "h-10" : "h-14"}`}
+            className={`w-auto transition-all duration-500 ${solid ? "h-10" : "h-14 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"}`}
           />
+
           <span className={`hidden text-[0.7rem] uppercase tracking-[0.34em] sm:inline ${solid ? "text-foreground/80" : "text-background/90"}`}>
             Casa Nestia
           </span>
