@@ -1,14 +1,16 @@
 import storyImg from "@/assets/story.jpg";
-import founderImg from "@/assets/founder.jpg";
 import servicesImg from "@/assets/services.jpg";
 import visionImg from "@/assets/vision.jpg";
-import marrakechImg from "@/assets/city-marrakech.jpg";
 import essaouiraImg from "@/assets/city-essaouira.jpg";
 import casablancaImg from "@/assets/city-casablanca.jpg";
+import bouznikaImg from "@/assets/city-bouznika.jpg";
+import bouskouraImg from "@/assets/city-bouskoura.jpg";
+import agadirImg from "@/assets/city-agadir.jpg";
 import signatureAsset from "@/assets/signature.png.asset.json";
 import { EMAIL, PHONE_FR, PHONE_MA, type Copy } from "@/content/casa-nestia";
 
-const CITY_IMAGES = [marrakechImg, essaouiraImg, casablancaImg];
+const CITY_IMAGES = [casablancaImg, essaouiraImg, bouznikaImg, bouskouraImg, agadirImg];
+
 
 export function Story({ copy }: { copy: Copy }) {
   return (
