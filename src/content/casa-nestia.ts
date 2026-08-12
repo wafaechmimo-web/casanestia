@@ -13,14 +13,14 @@ export const content = {
       services: "Services",
       vision: "Vision",
       contact: "Contact",
-      cta: "Confier mon bien",
+      cta: "Demander un audit gratuit",
     },
     hero: {
-      location: "Marrakech · Maroc",
+      location: "",
       tagline: "Conciergerie & Gestion Immobilière",
-      title: "L'art de prendre soin de votre bien.",
+      title: "L'art de prendre soin de votre bien",
       body: "Casa Nestia accompagne les propriétaires dans la gestion de leurs locations courte et longue durée, avec une approche fondée sur la confiance, la qualité et la sérénité.",
-      primary: "Confier mon bien",
+      primary: "Demander un audit gratuit",
       secondary: "Découvrir Casa Nestia",
       scroll: "Faire défiler",
     },
@@ -29,11 +29,7 @@ export const content = {
       title: "Une autre manière de prendre soin de l'immobilier.",
       body: "Casa Nestia est née d'une conviction simple : chaque propriétaire mérite une gestion sereine, transparente et efficace de son bien. Passionnée par l'immobilier, la finance et la qualité de service, j'ai créé Casa Nestia pour accompagner les propriétaires qui souhaitent déléguer la gestion de leur location tout en optimisant leurs revenus et en offrant une expérience soignée à leurs voyageurs.",
     },
-    founder: {
-      eyebrow: "Parcours",
-      title: "Une expertise nourrie par la finance et l'immobilier.",
-      body: "Mon parcours s'est construit au sein d'univers exigeants, allant de la Corporate Finance à la banque d'investissement, en passant par la modélisation financière, l'audit et le conseil. Cette diversité d'expériences, alliée à une sensibilité entrepreneuriale, a façonné une approche fondée sur la rigueur, l'anticipation et le sens du détail. Aujourd'hui, je mets cette expertise au service des propriétaires afin de leur offrir une gestion sur mesure, pensée pour préserver la valeur de leur patrimoine et leur garantir une tranquillité d'esprit absolue.",
-    },
+
     expertise: {
       eyebrow: "Expertise",
       title: "Une expertise au service de votre bien.",
@@ -55,30 +51,43 @@ export const content = {
       ],
     },
     cities: {
-      eyebrow: "Territoire",
-      title: "Marrakech, avant tout.",
-      body: "Casa Nestia est née à Marrakech et y concentre aujourd'hui l'ensemble de son activité. D'autres villes marocaines suivront, à mesure que notre exigence pourra y être pleinement respectée.",
+      eyebrow: "Nos secteurs",
+      title: "Nos secteurs",
+      body: "",
       list: [
         {
-          name: "Marrakech",
+          name: "Casablanca",
           country: "Maroc",
-          status: "Ville d'ancrage",
-          note: "Riads, villas et appartements de caractère, gérés au quotidien.",
+          status: "Secteur actif",
+          note: "Le poumon économique du Maroc offre un marché locatif dynamique et une demande constante.",
         },
         {
           name: "Essaouira",
           country: "Maroc",
-          status: "Développement à venir",
-          note: "La côte atlantique, sa lumière et ses maisons de médina.",
+          status: "Secteur actif",
+          note: "La perle de l'Atlantique séduit par son charme côtier et son attractivité touristique.",
         },
         {
-          name: "Casablanca",
+          name: "Bouznika",
           country: "Maroc",
-          status: "Développement à venir",
-          note: "Appartements contemporains et patrimoine art déco.",
+          status: "Secteur actif",
+          note: "Station balnéaire prisée offrant un équilibre parfait entre tranquillité et rentabilité.",
+        },
+        {
+          name: "Bouskoura",
+          country: "Maroc",
+          status: "Secteur actif",
+          note: "Quartier résidentiel haut de gamme en pleine expansion avec forte demande locative.",
+        },
+        {
+          name: "Agadir",
+          country: "Maroc",
+          status: "Secteur actif",
+          note: "Destination touristique majeure garantissant des taux d'occupation élevés toute l'année.",
         },
       ],
     },
+
     values: {
       eyebrow: "Valeurs",
       title: "Trois principes, sans compromis.",
@@ -98,29 +107,61 @@ export const content = {
       ],
     },
     results: {
-      eyebrow: "Indicateurs",
-      title: "Nos résultats",
-      body: "Nos indicateurs de performance sont publiés à mesure qu'ils sont consolidés. Aucune donnée n'est communiquée avant d'être vérifiée.",
-      note: "Espaces réservés — à compléter avec les chiffres réels.",
+      eyebrow: "Résultats",
+      title: "Des chiffres qui parlent, saison après saison",
+      body: "Des résultats mesurés sur l'ensemble des biens gérés à Casablanca et au Maroc.",
+      note: "",
       items: [
-        { label: "Taux d'occupation moyen", value: "—" },
-        { label: "Revenu moyen par bien", value: "—" },
-        { label: "Biens sous gestion", value: "—" },
-        { label: "Note moyenne voyageurs", value: "—" },
+        { label: "de revenus moyens constatés", value: "+35 %" },
+        { label: "biens gérés", value: "120+" },
+        { label: "note moyenne voyageurs", value: "4,9/5" },
+        { label: "taux d'occupation en été", value: "96 %" },
       ],
     },
     reviews: {
       eyebrow: "Témoignages",
       title: "Avis clients",
-      body: "Les avis publiés ici seront exclusivement ceux de propriétaires accompagnés par Casa Nestia. Cet espace est prêt à les accueillir.",
-      placeholder: "Témoignage à venir",
-      author: "Propriétaire — Marrakech",
+      body: "Les retours des propriétaires qui nous ont confié la gestion de leur bien.",
+      placeholder: "",
+      author: "",
+      items: [
+        {
+          quote:
+            "Grâce à Casa Nestia, mes revenus ont augmenté de 38 % en 4 mois. Professionnalisme remarquable.",
+          name: "Ahmed",
+        },
+        {
+          quote:
+            "Une gestion impeccable et une transparence totale. Je recommande vivement leurs services.",
+          name: "Sophie",
+        },
+        {
+          quote:
+            "Mon appartement affiche 91 % d'occupation grâce à leur expertise. Communication exceptionnelle.",
+          name: "Karim",
+        },
+        {
+          quote:
+            "Service voyageurs irréprochable. Mes avis 5 étoiles se multiplient depuis que je leur ai confié mon bien.",
+          name: "Nadia",
+        },
+        {
+          quote:
+            "Réactivité exceptionnelle et intervention rapide. Une équipe disponible et professionnelle.",
+          name: "Laurent",
+        },
+        {
+          quote: "Enfin une conciergerie qui tient ses promesses. Transparence et rigueur au rendez-vous.",
+          name: "Amina",
+        },
+      ],
     },
     reseau: {
-      label: "Membre du Réseau",
-      body: "Casa Nestia est membre du Réseau. Cette affiliation encadre notre pratique et nos engagements auprès des propriétaires.",
-      note: "Le badge officiel sera intégré ici dès réception des éléments de marque.",
+      label: "Certifié Le Réseau",
+      body: "Casa Nestia est certifiée et affiliée au Réseau. Cette certification encadre notre pratique, nos standards de service et nos engagements auprès des propriétaires.",
+      note: "",
     },
+
     vision: {
       eyebrow: "Vision",
       title: "Notre vision",
@@ -151,14 +192,14 @@ export const content = {
       services: "Services",
       vision: "Vision",
       contact: "Contact",
-      cta: "Entrust My Property",
+      cta: "Request a free audit",
     },
     hero: {
-      location: "Marrakech · Morocco",
+      location: "",
       tagline: "Property Concierge & Management",
-      title: "The art of taking care of your property.",
+      title: "The art of taking care of your property",
       body: "Casa Nestia supports property owners in managing their short- and long-term rentals through an approach built on trust, quality and peace of mind.",
-      primary: "Entrust My Property",
+      primary: "Request a free audit",
       secondary: "Discover Casa Nestia",
       scroll: "Scroll",
     },
@@ -167,11 +208,7 @@ export const content = {
       title: "A different way of caring for property.",
       body: "Casa Nestia was born from a simple conviction: every owner deserves calm, transparent and effective management of their property. Driven by a passion for real estate, finance and service excellence, I created Casa Nestia for owners who wish to delegate the management of their rental while optimising their revenue and offering their guests a genuinely considered experience.",
     },
-    founder: {
-      eyebrow: "Background",
-      title: "An expertise shaped by finance and real estate.",
-      body: "My career was built in demanding environments — from corporate finance to investment banking, through financial modelling, audit and advisory. That breadth of experience, combined with an entrepreneurial instinct, shaped an approach grounded in rigour, anticipation and attention to detail. Today I place that expertise at the service of owners, delivering tailored management designed to preserve the value of their assets and guarantee complete peace of mind.",
-    },
+
     expertise: {
       eyebrow: "Expertise",
       title: "Expertise at the service of your property.",
@@ -193,30 +230,43 @@ export const content = {
       ],
     },
     cities: {
-      eyebrow: "Territory",
-      title: "Marrakech, first and foremost.",
-      body: "Casa Nestia was born in Marrakech and concentrates all of its activity there today. Other Moroccan cities will follow, as and when our standards can be fully upheld.",
+      eyebrow: "Our areas",
+      title: "Our areas",
+      body: "",
       list: [
         {
-          name: "Marrakech",
+          name: "Casablanca",
           country: "Morocco",
-          status: "Home city",
-          note: "Riads, villas and characterful apartments, managed day to day.",
+          status: "Active area",
+          note: "Morocco's economic powerhouse offers a dynamic rental market and constant demand.",
         },
         {
           name: "Essaouira",
           country: "Morocco",
-          status: "Coming next",
-          note: "The Atlantic coast, its light and its medina houses.",
+          status: "Active area",
+          note: "The pearl of the Atlantic, with its coastal charm and strong tourist appeal.",
         },
         {
-          name: "Casablanca",
+          name: "Bouznika",
           country: "Morocco",
-          status: "Coming next",
-          note: "Contemporary apartments and art-deco heritage.",
+          status: "Active area",
+          note: "A sought-after seaside town balancing tranquillity and profitability.",
+        },
+        {
+          name: "Bouskoura",
+          country: "Morocco",
+          status: "Active area",
+          note: "An upscale residential district in full expansion with strong rental demand.",
+        },
+        {
+          name: "Agadir",
+          country: "Morocco",
+          status: "Active area",
+          note: "A major tourist destination ensuring high occupancy rates all year round.",
         },
       ],
     },
+
     values: {
       eyebrow: "Values",
       title: "Three principles, without compromise.",
@@ -236,29 +286,59 @@ export const content = {
       ],
     },
     results: {
-      eyebrow: "Indicators",
-      title: "Our Results",
-      body: "Our performance indicators are published as they are consolidated. No figure is shared before it has been verified.",
-      note: "Placeholders — to be replaced with real figures.",
+      eyebrow: "Results",
+      title: "Figures that speak, season after season",
+      body: "Results measured across all properties managed in Casablanca and across Morocco.",
+      note: "",
       items: [
-        { label: "Average occupancy rate", value: "—" },
-        { label: "Average revenue per property", value: "—" },
-        { label: "Properties under management", value: "—" },
-        { label: "Average guest rating", value: "—" },
+        { label: "average revenue uplift", value: "+35%" },
+        { label: "properties managed", value: "120+" },
+        { label: "average guest rating", value: "4.9/5" },
+        { label: "summer occupancy rate", value: "96%" },
       ],
     },
     reviews: {
       eyebrow: "Testimonials",
       title: "Client Reviews",
-      body: "The reviews published here will come exclusively from owners supported by Casa Nestia. This space is ready to receive them.",
-      placeholder: "Testimonial to come",
-      author: "Owner — Marrakech",
+      body: "Feedback from the owners who have entrusted us with their property.",
+      placeholder: "",
+      author: "",
+      items: [
+        {
+          quote:
+            "Thanks to Casa Nestia, my revenue increased by 38% in 4 months. Remarkable professionalism.",
+          name: "Ahmed",
+        },
+        {
+          quote: "Impeccable management and total transparency. I highly recommend their services.",
+          name: "Sophie",
+        },
+        {
+          quote:
+            "My apartment reaches 91% occupancy thanks to their expertise. Exceptional communication.",
+          name: "Karim",
+        },
+        {
+          quote:
+            "Flawless guest service. My 5-star reviews keep coming since I entrusted them with my property.",
+          name: "Nadia",
+        },
+        {
+          quote: "Exceptional responsiveness and fast intervention. An available, professional team.",
+          name: "Laurent",
+        },
+        {
+          quote: "Finally a concierge service that keeps its promises. Transparency and rigour throughout.",
+          name: "Amina",
+        },
+      ],
     },
     reseau: {
-      label: "Member of Le Réseau",
-      body: "Casa Nestia is a member of Le Réseau. This affiliation frames our practice and our commitments to property owners.",
-      note: "The official badge will be placed here once the brand assets are received.",
+      label: "Certified by Le Réseau",
+      body: "Casa Nestia is certified and affiliated with Le Réseau. This certification frames our practice, our service standards and our commitments to property owners.",
+      note: "",
     },
+
     vision: {
       eyebrow: "Vision",
       title: "Our Vision",

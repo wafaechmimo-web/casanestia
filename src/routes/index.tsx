@@ -4,7 +4,6 @@ import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import {
   Story,
-  Founder,
   Expertise,
   Services,
   Cities,
@@ -57,7 +56,6 @@ function Index() {
       <main>
         <Hero copy={copy} />
         <Story copy={copy} />
-        <Founder copy={copy} />
         <Expertise copy={copy} />
         <Services copy={copy} />
         <Cities copy={copy} />

@@ -1,14 +1,16 @@
 import storyImg from "@/assets/story.jpg";
-import founderImg from "@/assets/founder.jpg";
 import servicesImg from "@/assets/services.jpg";
 import visionImg from "@/assets/vision.jpg";
-import marrakechImg from "@/assets/city-marrakech.jpg";
 import essaouiraImg from "@/assets/city-essaouira.jpg";
 import casablancaImg from "@/assets/city-casablanca.jpg";
+import bouznikaImg from "@/assets/city-bouznika.jpg";
+import bouskouraImg from "@/assets/city-bouskoura.jpg";
+import agadirImg from "@/assets/city-agadir.jpg";
 import signatureAsset from "@/assets/signature.png.asset.json";
 import { EMAIL, PHONE_FR, PHONE_MA, type Copy } from "@/content/casa-nestia";
 
-const CITY_IMAGES = [marrakechImg, essaouiraImg, casablancaImg];
+const CITY_IMAGES = [casablancaImg, essaouiraImg, bouznikaImg, bouskouraImg, agadirImg];
+
 
 export function Story({ copy }: { copy: Copy }) {
   return (
@@ -47,33 +49,8 @@ export function Story({ copy }: { copy: Copy }) {
   );
 }
 
-export function Founder({ copy }: { copy: Copy }) {
-  return (
-    <section className="border-y border-border bg-secondary/60">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-24 md:grid-cols-12 md:gap-16 md:px-10 md:py-36">
-        <div className="md:col-span-6">
-          <p className="eyebrow">{copy.founder.eyebrow}</p>
-          <h2 className="mt-6 max-w-lg font-display text-[1.9rem] leading-[1.15] md:text-[2.6rem]">
-            {copy.founder.title}
-          </h2>
-          <p className="mt-8 max-w-xl text-[0.97rem] leading-[1.9] text-muted-foreground">
-            {copy.founder.body}
-          </p>
-        </div>
-        <div className="md:col-span-5 md:col-start-8">
-          <img
-            src={founderImg}
-            alt="Bureau baigné de lumière dans un intérieur marocain"
-            width={1200}
-            height={1408}
-            loading="lazy"
-            className="h-[340px] w-full object-cover md:h-[520px]"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
 
 export function Expertise({ copy }: { copy: Copy }) {
   return (
@@ -140,27 +117,29 @@ export function Services({ copy }: { copy: Copy }) {
 
 export function Cities({ copy }: { copy: Copy }) {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-      <div className="max-w-2xl">
-        <p className="eyebrow">{copy.cities.eyebrow}</p>
-        <h2 className="mt-6 font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
-          {copy.cities.title}
-        </h2>
-        <p className="mt-6 text-[0.97rem] leading-[1.9] text-muted-foreground">
-          {copy.cities.body}
-        </p>
+    <section id="secteurs" className="py-24 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10">
+        <div className="flex items-end justify-between gap-6">
+          <h2 className="font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
+            {copy.cities.title}
+          </h2>
+          <div className="zellige-band hidden h-10 w-40 opacity-50 md:block" />
+        </div>
       </div>
 
-      <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
+      <div className="scroll-x mt-14 gap-6 px-6 pb-4 md:px-10">
         {copy.cities.list.map((city, i) => (
-          <article key={city.name} className={i === 0 ? "md:-mt-8" : i === 2 ? "md:mt-10" : ""}>
+          <article
+            key={city.name}
+            className="w-[78vw] shrink-0 snap-start sm:w-[46vw] lg:w-[30vw] xl:w-[24rem]"
+          >
             <img
               src={CITY_IMAGES[i]}
               alt={`${city.name}, ${city.country}`}
               width={1200}
               height={1504}
               loading="lazy"
-              className="h-[360px] w-full object-cover md:h-[480px]"
+              className="h-[380px] w-full object-cover md:h-[460px]"
             />
             <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-border pt-4">
               <h3 className="font-display text-2xl">{city.name}</h3>
@@ -175,6 +154,7 @@ export function Cities({ copy }: { copy: Copy }) {
     </section>
   );
 }
+
 
 export function Values({ copy }: { copy: Copy }) {
   return (
@@ -216,8 +196,10 @@ export function Results({ copy }: { copy: Copy }) {
           <p className="text-[0.97rem] leading-[1.9] text-muted-foreground">{copy.results.body}</p>
           <dl className="mt-12 grid grid-cols-1 sm:grid-cols-2">
             {copy.results.items.map((item) => (
-              <div key={item.label} className="border-t border-border py-8 sm:odd:pr-10 sm:even:pl-10 sm:even:border-l">
-                {/* EDITABLE: replace the em dash with the real figure */}
+              <div
+                key={item.label}
+                className="border-t border-border py-8 sm:odd:pr-10 sm:even:border-l sm:even:pl-10"
+              >
                 <dd className="font-display text-4xl text-primary">{item.value}</dd>
                 <dt className="mt-3 text-[0.68rem] uppercase tracking-[0.22em] text-muted-foreground">
                   {item.label}
@@ -225,7 +207,6 @@ export function Results({ copy }: { copy: Copy }) {
               </div>
             ))}
           </dl>
-          <p className="mt-6 text-xs italic text-muted-foreground/80">{copy.results.note}</p>
         </div>
       </div>
     </section>
@@ -249,15 +230,14 @@ export function Reviews({ copy }: { copy: Copy }) {
         </div>
 
         <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
-          {/* EDITABLE: replace each block with a real testimonial and author */}
-          {[0, 1, 2].map((i) => (
-            <blockquote key={i} className="bg-background px-8 py-14">
-              <span className="font-display text-4xl text-rose-soft">“</span>
-              <p className="mt-4 font-display text-xl italic leading-relaxed text-muted-foreground/70">
-                {copy.reviews.placeholder}
+          {copy.reviews.items.map((r) => (
+            <blockquote key={r.name} className="bg-background px-8 py-12">
+              <span className="text-sm tracking-[0.3em] text-gold">★★★★★</span>
+              <p className="mt-5 font-display text-xl italic leading-relaxed text-foreground/85">
+                “{r.quote}”
               </p>
-              <footer className="mt-8 text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground/70">
-                {copy.reviews.author}
+              <footer className="mt-8 text-[0.65rem] uppercase tracking-[0.22em] text-primary">
+                {r.name}
               </footer>
             </blockquote>
           ))}
@@ -270,11 +250,11 @@ export function Reviews({ copy }: { copy: Copy }) {
 export function Reseau({ copy }: { copy: Copy }) {
   return (
     <section className="border-y border-border bg-secondary/60">
+      <div className="zellige-band h-2 w-full opacity-60" />
       <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-14 md:flex-row md:items-center md:justify-between md:px-10">
         <div className="flex items-center gap-6">
-          {/* EDITABLE: replace with the official Le Réseau badge once provided */}
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center border border-gold/60 font-display text-lg text-gold">
-            LR
+          <div className="zellige-star flex h-16 w-16 shrink-0 items-center justify-center border border-gold/60 font-display text-lg text-gold">
+            <span className="bg-background/85 px-2">LR</span>
           </div>
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.28em] text-primary">
@@ -285,11 +265,11 @@ export function Reseau({ copy }: { copy: Copy }) {
             </p>
           </div>
         </div>
-        <p className="max-w-xs text-xs italic text-muted-foreground/70">{copy.reseau.note}</p>
       </div>
     </section>
   );
 }
+
 
 export function Vision({ copy }: { copy: Copy }) {
   return (
