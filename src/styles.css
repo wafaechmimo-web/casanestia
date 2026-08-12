@@ -181,3 +181,43 @@
     transform: none;
   }
 }
+
+/* Zellige — inspiration marocaine */
+@utility zellige-band {
+  background-color: color-mix(in oklab, var(--rose) 8%, transparent);
+  background-image:
+    repeating-conic-gradient(
+      from 45deg,
+      color-mix(in oklab, var(--rose) 26%, transparent) 0deg 90deg,
+      transparent 90deg 180deg
+    ),
+    repeating-conic-gradient(
+      from 0deg,
+      color-mix(in oklab, var(--gold) 22%, transparent) 0deg 90deg,
+      transparent 90deg 180deg
+    );
+  background-size:
+    28px 28px,
+    28px 28px;
+  background-position:
+    0 0,
+    14px 14px;
+}
+
+@utility zellige-star {
+  background-image:
+    linear-gradient(45deg, color-mix(in oklab, var(--gold) 30%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--gold) 30%, transparent) 75%),
+    linear-gradient(45deg, color-mix(in oklab, var(--rose) 28%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--rose) 28%, transparent) 75%);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+@utility scroll-x {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
