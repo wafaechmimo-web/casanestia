@@ -192,14 +192,14 @@ export const content = {
       services: "Services",
       vision: "Vision",
       contact: "Contact",
-      cta: "Entrust My Property",
+      cta: "Request a free audit",
     },
     hero: {
-      location: "Marrakech · Morocco",
+      location: "",
       tagline: "Property Concierge & Management",
-      title: "The art of taking care of your property.",
+      title: "The art of taking care of your property",
       body: "Casa Nestia supports property owners in managing their short- and long-term rentals through an approach built on trust, quality and peace of mind.",
-      primary: "Entrust My Property",
+      primary: "Request a free audit",
       secondary: "Discover Casa Nestia",
       scroll: "Scroll",
     },
@@ -208,11 +208,7 @@ export const content = {
       title: "A different way of caring for property.",
       body: "Casa Nestia was born from a simple conviction: every owner deserves calm, transparent and effective management of their property. Driven by a passion for real estate, finance and service excellence, I created Casa Nestia for owners who wish to delegate the management of their rental while optimising their revenue and offering their guests a genuinely considered experience.",
     },
-    founder: {
-      eyebrow: "Background",
-      title: "An expertise shaped by finance and real estate.",
-      body: "My career was built in demanding environments — from corporate finance to investment banking, through financial modelling, audit and advisory. That breadth of experience, combined with an entrepreneurial instinct, shaped an approach grounded in rigour, anticipation and attention to detail. Today I place that expertise at the service of owners, delivering tailored management designed to preserve the value of their assets and guarantee complete peace of mind.",
-    },
+
     expertise: {
       eyebrow: "Expertise",
       title: "Expertise at the service of your property.",
