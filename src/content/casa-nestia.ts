@@ -13,14 +13,14 @@ export const content = {
       services: "Services",
       vision: "Vision",
       contact: "Contact",
-      cta: "Confier mon bien",
+      cta: "Demander un audit gratuit",
     },
     hero: {
-      location: "Marrakech · Maroc",
+      location: "",
       tagline: "Conciergerie & Gestion Immobilière",
-      title: "L'art de prendre soin de votre bien.",
+      title: "L'art de prendre soin de votre bien",
       body: "Casa Nestia accompagne les propriétaires dans la gestion de leurs locations courte et longue durée, avec une approche fondée sur la confiance, la qualité et la sérénité.",
-      primary: "Confier mon bien",
+      primary: "Demander un audit gratuit",
       secondary: "Découvrir Casa Nestia",
       scroll: "Faire défiler",
     },
@@ -29,11 +29,7 @@ export const content = {
       title: "Une autre manière de prendre soin de l'immobilier.",
       body: "Casa Nestia est née d'une conviction simple : chaque propriétaire mérite une gestion sereine, transparente et efficace de son bien. Passionnée par l'immobilier, la finance et la qualité de service, j'ai créé Casa Nestia pour accompagner les propriétaires qui souhaitent déléguer la gestion de leur location tout en optimisant leurs revenus et en offrant une expérience soignée à leurs voyageurs.",
     },
-    founder: {
-      eyebrow: "Parcours",
-      title: "Une expertise nourrie par la finance et l'immobilier.",
-      body: "Mon parcours s'est construit au sein d'univers exigeants, allant de la Corporate Finance à la banque d'investissement, en passant par la modélisation financière, l'audit et le conseil. Cette diversité d'expériences, alliée à une sensibilité entrepreneuriale, a façonné une approche fondée sur la rigueur, l'anticipation et le sens du détail. Aujourd'hui, je mets cette expertise au service des propriétaires afin de leur offrir une gestion sur mesure, pensée pour préserver la valeur de leur patrimoine et leur garantir une tranquillité d'esprit absolue.",
-    },
+
     expertise: {
       eyebrow: "Expertise",
       title: "Une expertise au service de votre bien.",
