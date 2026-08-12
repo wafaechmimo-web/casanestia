@@ -117,27 +117,29 @@ export function Services({ copy }: { copy: Copy }) {
 
 export function Cities({ copy }: { copy: Copy }) {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-      <div className="max-w-2xl">
-        <p className="eyebrow">{copy.cities.eyebrow}</p>
-        <h2 className="mt-6 font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
-          {copy.cities.title}
-        </h2>
-        <p className="mt-6 text-[0.97rem] leading-[1.9] text-muted-foreground">
-          {copy.cities.body}
-        </p>
+    <section id="secteurs" className="py-24 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10">
+        <div className="flex items-end justify-between gap-6">
+          <h2 className="font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
+            {copy.cities.title}
+          </h2>
+          <div className="zellige-band hidden h-10 w-40 opacity-50 md:block" />
+        </div>
       </div>
 
-      <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
+      <div className="scroll-x mt-14 gap-6 px-6 pb-4 md:px-10">
         {copy.cities.list.map((city, i) => (
-          <article key={city.name} className={i === 0 ? "md:-mt-8" : i === 2 ? "md:mt-10" : ""}>
+          <article
+            key={city.name}
+            className="w-[78vw] shrink-0 snap-start sm:w-[46vw] lg:w-[30vw] xl:w-[24rem]"
+          >
             <img
               src={CITY_IMAGES[i]}
               alt={`${city.name}, ${city.country}`}
               width={1200}
               height={1504}
               loading="lazy"
-              className="h-[360px] w-full object-cover md:h-[480px]"
+              className="h-[380px] w-full object-cover md:h-[460px]"
             />
             <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-border pt-4">
               <h3 className="font-display text-2xl">{city.name}</h3>
@@ -152,6 +154,7 @@ export function Cities({ copy }: { copy: Copy }) {
     </section>
   );
 }
+
 
 export function Values({ copy }: { copy: Copy }) {
   return (
