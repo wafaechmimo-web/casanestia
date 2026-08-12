@@ -196,8 +196,10 @@ export function Results({ copy }: { copy: Copy }) {
           <p className="text-[0.97rem] leading-[1.9] text-muted-foreground">{copy.results.body}</p>
           <dl className="mt-12 grid grid-cols-1 sm:grid-cols-2">
             {copy.results.items.map((item) => (
-              <div key={item.label} className="border-t border-border py-8 sm:odd:pr-10 sm:even:pl-10 sm:even:border-l">
-                {/* EDITABLE: replace the em dash with the real figure */}
+              <div
+                key={item.label}
+                className="border-t border-border py-8 sm:odd:pr-10 sm:even:border-l sm:even:pl-10"
+              >
                 <dd className="font-display text-4xl text-primary">{item.value}</dd>
                 <dt className="mt-3 text-[0.68rem] uppercase tracking-[0.22em] text-muted-foreground">
                   {item.label}
@@ -205,7 +207,6 @@ export function Results({ copy }: { copy: Copy }) {
               </div>
             ))}
           </dl>
-          <p className="mt-6 text-xs italic text-muted-foreground/80">{copy.results.note}</p>
         </div>
       </div>
     </section>
@@ -229,15 +230,14 @@ export function Reviews({ copy }: { copy: Copy }) {
         </div>
 
         <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
-          {/* EDITABLE: replace each block with a real testimonial and author */}
-          {[0, 1, 2].map((i) => (
-            <blockquote key={i} className="bg-background px-8 py-14">
-              <span className="font-display text-4xl text-rose-soft">“</span>
-              <p className="mt-4 font-display text-xl italic leading-relaxed text-muted-foreground/70">
-                {copy.reviews.placeholder}
+          {copy.reviews.items.map((r) => (
+            <blockquote key={r.name} className="bg-background px-8 py-12">
+              <span className="text-sm tracking-[0.3em] text-gold">★★★★★</span>
+              <p className="mt-5 font-display text-xl italic leading-relaxed text-foreground/85">
+                “{r.quote}”
               </p>
-              <footer className="mt-8 text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground/70">
-                {copy.reviews.author}
+              <footer className="mt-8 text-[0.65rem] uppercase tracking-[0.22em] text-primary">
+                {r.name}
               </footer>
             </blockquote>
           ))}
@@ -250,11 +250,11 @@ export function Reviews({ copy }: { copy: Copy }) {
 export function Reseau({ copy }: { copy: Copy }) {
   return (
     <section className="border-y border-border bg-secondary/60">
+      <div className="zellige-band h-2 w-full opacity-60" />
       <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-14 md:flex-row md:items-center md:justify-between md:px-10">
         <div className="flex items-center gap-6">
-          {/* EDITABLE: replace with the official Le Réseau badge once provided */}
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center border border-gold/60 font-display text-lg text-gold">
-            LR
+          <div className="zellige-star flex h-16 w-16 shrink-0 items-center justify-center border border-gold/60 font-display text-lg text-gold">
+            <span className="bg-background/85 px-2">LR</span>
           </div>
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.28em] text-primary">
@@ -265,11 +265,11 @@ export function Reseau({ copy }: { copy: Copy }) {
             </p>
           </div>
         </div>
-        <p className="max-w-xs text-xs italic text-muted-foreground/70">{copy.reseau.note}</p>
       </div>
     </section>
   );
 }
+
 
 export function Vision({ copy }: { copy: Copy }) {
   return (
