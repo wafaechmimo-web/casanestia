@@ -51,8 +51,8 @@ export const content = {
       ],
     },
     cities: {
-      eyebrow: "Nos secteurs",
-      title: "Nos secteurs",
+      eyebrow: "Secteurs",
+      title: "Secteurs",
       body: "",
       list: [
         {
@@ -109,7 +109,7 @@ export const content = {
     results: {
       eyebrow: "Résultats",
       title: "Des chiffres qui parlent, saison après saison",
-      body: "Des résultats mesurés sur l'ensemble des biens gérés à Casablanca et au Maroc.",
+      body: "Des résultats mesurables sur l’ensemble des biens gérés dans les différents territoires du Maroc.",
       note: "",
       items: [
         { label: "de revenus moyens constatés", value: "+35 %" },

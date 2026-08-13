@@ -49,7 +49,7 @@ export function Nav({
           />
 
           <span className={`hidden text-[0.7rem] uppercase tracking-[0.34em] sm:inline ${solid ? "text-foreground/80" : "text-background/90"}`}>
-            Casa Nestia
+            {"\n"}
           </span>
         </a>
 

@@ -346,9 +346,9 @@ export function Contact({ copy }: { copy: Copy }) {
           </div>
           <div className="mt-10 border-t border-border pt-6">
             <p className="text-[0.65rem] uppercase tracking-[0.24em] text-muted-foreground">
-              Marrakech
+              {"\n"}
             </p>
-            <p className="mt-3 font-display text-xl">{copy.footer.location}</p>
+            <p className="mt-3 font-display text-xl">{"\n"}</p>
           </div>
         </div>
       </div>
