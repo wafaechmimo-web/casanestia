@@ -3,13 +3,15 @@ import servicesImg from "@/assets/services.jpg";
 import visionImg from "@/assets/vision.jpg";
 import essaouiraImg from "@/assets/city-essaouira.jpg";
 import casablancaImg from "@/assets/city-casablanca.jpg";
-import bouznikaImg from "@/assets/city-bouznika.jpg";
+import marrakechImg from "@/assets/city-marrakech.jpg";
+import rabatImg from "@/assets/city-rabat.jpg";
 import bouskouraImg from "@/assets/city-bouskoura.jpg";
 import agadirImg from "@/assets/city-agadir.jpg";
+import reseauLogo from "@/assets/le-reseau-logo.png";
 import signatureAsset from "@/assets/signature.png.asset.json";
 import { EMAIL, PHONE_FR, PHONE_MA, type Copy } from "@/content/casa-nestia";
 
-const CITY_IMAGES = [casablancaImg, essaouiraImg, bouznikaImg, bouskouraImg, agadirImg];
+const CITY_IMAGES = [marrakechImg, casablancaImg, essaouiraImg, bouskouraImg, rabatImg, agadirImg];
 
 
 export function Story({ copy }: { copy: Copy }) {
@@ -119,12 +121,9 @@ export function Cities({ copy }: { copy: Copy }) {
   return (
     <section id="secteurs" className="py-24 md:py-36">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="flex items-end justify-between gap-6">
-          <h2 className="font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
-            {copy.cities.title}
-          </h2>
-          <div className="zellige-band hidden h-10 w-40 opacity-50 md:block" />
-        </div>
+        <h2 className="font-display text-[2rem] leading-[1.15] md:text-[2.9rem]">
+          {copy.cities.title}
+        </h2>
       </div>
 
       <div className="scroll-x mt-14 gap-6 px-6 pb-4 md:px-10">
@@ -250,26 +249,39 @@ export function Reviews({ copy }: { copy: Copy }) {
 export function Reseau({ copy }: { copy: Copy }) {
   return (
     <section className="border-y border-border bg-secondary/60">
-      <div className="zellige-band h-2 w-full opacity-60" />
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-14 md:flex-row md:items-center md:justify-between md:px-10">
-        <div className="flex items-center gap-6">
-          <div className="zellige-star flex h-16 w-16 shrink-0 items-center justify-center border border-gold/60 font-display text-lg text-gold">
-            <span className="bg-background/85 px-2">LR</span>
-          </div>
-          <div>
-            <p className="text-[0.7rem] uppercase tracking-[0.28em] text-primary">
-              {copy.reseau.label}
-            </p>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              {copy.reseau.body}
-            </p>
-          </div>
+      <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-6 py-20 md:grid-cols-12 md:px-10 md:py-24">
+        <div className="md:col-span-4">
+          <img
+            src={reseauLogo}
+            alt="Le Réseau — certification"
+            width={2514}
+            height={1058}
+            loading="lazy"
+            className="h-20 w-auto object-contain"
+          />
+          <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-primary">
+            {copy.reseau.label}
+          </p>
+        </div>
+        <div className="md:col-span-7 md:col-start-6">
+          <h2 className="font-display text-[1.8rem] leading-[1.2] md:text-[2.4rem]">
+            {copy.reseau.title}
+          </h2>
+          <p className="mt-6 text-[0.97rem] leading-[1.9] text-muted-foreground">
+            {copy.reseau.body}
+          </p>
+          <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3">
+            {copy.reseau.items.map((it) => (
+              <li key={it} className="text-[0.68rem] uppercase tracking-[0.22em] text-foreground/70">
+                {it}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
   );
 }
-
 
 export function Vision({ copy }: { copy: Copy }) {
   return (
@@ -346,9 +358,9 @@ export function Contact({ copy }: { copy: Copy }) {
           </div>
           <div className="mt-10 border-t border-border pt-6">
             <p className="text-[0.65rem] uppercase tracking-[0.24em] text-muted-foreground">
-              {"\n"}
+              {copy.contact.addressLabel}
             </p>
-            <p className="mt-3 font-display text-xl">{"\n"}</p>
+            <p className="mt-3 font-display text-xl">{copy.contact.address}</p>
           </div>
         </div>
       </div>
