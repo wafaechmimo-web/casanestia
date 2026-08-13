@@ -56,6 +56,12 @@ export const content = {
       body: "",
       list: [
         {
+          name: "Marrakech",
+          country: "Maroc",
+          status: "Secteur actif",
+          note: "La ville ocre, première destination touristique du Royaume, avec une demande locative soutenue toute l'année.",
+        },
+        {
           name: "Casablanca",
           country: "Maroc",
           status: "Secteur actif",
@@ -68,16 +74,16 @@ export const content = {
           note: "La perle de l'Atlantique séduit par son charme côtier et son attractivité touristique.",
         },
         {
-          name: "Bouznika",
-          country: "Maroc",
-          status: "Secteur actif",
-          note: "Station balnéaire prisée offrant un équilibre parfait entre tranquillité et rentabilité.",
-        },
-        {
           name: "Bouskoura",
           country: "Maroc",
           status: "Secteur actif",
           note: "Quartier résidentiel haut de gamme en pleine expansion avec forte demande locative.",
+        },
+        {
+          name: "Rabat",
+          country: "Maroc",
+          status: "Secteur actif",
+          note: "La capitale administrative attire une clientèle professionnelle et diplomatique exigeante.",
         },
         {
           name: "Agadir",
@@ -157,8 +163,10 @@ export const content = {
       ],
     },
     reseau: {
-      label: "Certifié Le Réseau",
-      body: "Casa Nestia est certifiée et affiliée au Réseau. Cette certification encadre notre pratique, nos standards de service et nos engagements auprès des propriétaires.",
+      label: "✓ Certifié par Le Réseau",
+      title: "Membre d'un réseau de conciergeries d'excellence",
+      body: "Cette conciergerie fait partie d'un écosystème de professionnels sélectionnés autour de standards de qualité rigoureux, d'un partage de bonnes pratiques et d'un engagement commun envers l'hospitalité.",
+      items: ["Standards de qualité", "Réseau professionnel", "Confiance et excellence"],
       note: "",
     },
 
@@ -174,6 +182,22 @@ export const content = {
       cta: "Prendre contact",
       phoneLabel: "Téléphone",
       emailLabel: "Email",
+      addressLabel: "Adresse",
+      address: "Marrakech · Maroc",
+    },
+    estimate: {
+      eyebrow: "Estimation gratuite",
+      title: "Prêt à maximiser vos revenus ?",
+      body: "Avec Casa Nestia, votre bien peut générer des revenus optimisés grâce à notre expertise en gestion locative.",
+      points: ["Réponse sous 48h", "Aucun engagement", "Étude basée sur votre secteur exact"],
+      formTitle: "Recevoir mon estimation",
+      formBody: "Remplissez le formulaire, on vous recontacte rapidement.",
+      name: "Nom et prénom",
+      email: "Email",
+      phone: "Téléphone",
+      address: "Adresse du bien",
+      submit: "Recevoir mon estimation gratuite",
+      success: "Merci ! Votre demande a bien été envoyée, nous revenons vers vous sous 48h.",
     },
     footer: {
       tagline: "Conciergerie & Gestion Immobilière",
@@ -230,10 +254,16 @@ export const content = {
       ],
     },
     cities: {
-      eyebrow: "Our areas",
-      title: "Our areas",
+      eyebrow: "Areas",
+      title: "Areas",
       body: "",
       list: [
+        {
+          name: "Marrakech",
+          country: "Morocco",
+          status: "Active area",
+          note: "The ochre city, Morocco's leading tourist destination, with sustained rental demand all year round.",
+        },
         {
           name: "Casablanca",
           country: "Morocco",
@@ -247,16 +277,16 @@ export const content = {
           note: "The pearl of the Atlantic, with its coastal charm and strong tourist appeal.",
         },
         {
-          name: "Bouznika",
-          country: "Morocco",
-          status: "Active area",
-          note: "A sought-after seaside town balancing tranquillity and profitability.",
-        },
-        {
           name: "Bouskoura",
           country: "Morocco",
           status: "Active area",
           note: "An upscale residential district in full expansion with strong rental demand.",
+        },
+        {
+          name: "Rabat",
+          country: "Morocco",
+          status: "Active area",
+          note: "The administrative capital attracts a demanding professional and diplomatic clientele.",
         },
         {
           name: "Agadir",
@@ -334,8 +364,10 @@ export const content = {
       ],
     },
     reseau: {
-      label: "Certified by Le Réseau",
-      body: "Casa Nestia is certified and affiliated with Le Réseau. This certification frames our practice, our service standards and our commitments to property owners.",
+      label: "✓ Certified by Le Réseau",
+      title: "Member of a network of concierge services of excellence",
+      body: "This concierge service is part of an ecosystem of selected professionals built around rigorous quality standards, shared best practices and a common commitment to hospitality.",
+      items: ["Quality standards", "Professional network", "Trust and excellence"],
       note: "",
     },
 
@@ -351,6 +383,22 @@ export const content = {
       cta: "Get in touch",
       phoneLabel: "Telephone",
       emailLabel: "Email",
+      addressLabel: "Address",
+      address: "Marrakech · Morocco",
+    },
+    estimate: {
+      eyebrow: "Free estimate",
+      title: "Ready to maximise your revenue?",
+      body: "With Casa Nestia, your property can generate optimised revenue thanks to our rental management expertise.",
+      points: ["Reply within 48h", "No commitment", "Study based on your exact area"],
+      formTitle: "Get my estimate",
+      formBody: "Fill in the form and we will get back to you shortly.",
+      name: "Full name",
+      email: "Email",
+      phone: "Phone",
+      address: "Property address",
+      submit: "Get my free estimate",
+      success: "Thank you! Your request has been sent, we will get back to you within 48h.",
     },
     footer: {
       tagline: "Property Concierge & Management",
