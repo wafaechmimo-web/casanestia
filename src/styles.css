@@ -47,11 +47,11 @@
 :root {
   --radius: 0px;
   /* exact rose from the uploaded swatch */
-  --rose: oklch(0.694 0.088 15.9);
-  --rose-deep: oklch(0.619 0.093 14.8);
-  --rose-soft: oklch(0.807 0.056 15.6);
+  --rose: oklch(0.652 0.098 22.5);
+  --rose-deep: oklch(0.578 0.104 23.5);
+  --rose-soft: oklch(0.812 0.056 24);
   --gold: oklch(0.741 0.082 80.9);
-  --ivory: oklch(0.975 0.009 78.3);
+  --ivory: oklch(0.972 0.016 84);
   --anthracite: oklch(0.262 0.005 67.6);
 
   --background: var(--ivory);
@@ -62,16 +62,16 @@
   --popover-foreground: var(--anthracite);
   --primary: var(--rose);
   --primary-foreground: oklch(0.99 0.004 78);
-  --secondary: oklch(0.955 0.012 40);
+  --secondary: oklch(0.951 0.019 72);
   --secondary-foreground: var(--anthracite);
-  --muted: oklch(0.955 0.008 60);
+  --muted: oklch(0.951 0.015 72);
   --muted-foreground: oklch(0.5 0.012 40);
   --accent: var(--rose-soft);
   --accent-foreground: var(--anthracite);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.014 40);
-  --input: oklch(0.9 0.014 40);
+  --border: oklch(0.897 0.017 60);
+  --input: oklch(0.897 0.017 60);
   --ring: var(--rose);
 }
 
@@ -180,36 +180,6 @@
     opacity: 1;
     transform: none;
   }
-}
-
-/* Zellige — inspiration marocaine */
-@utility zellige-band {
-  background-color: color-mix(in oklab, var(--rose) 8%, transparent);
-  background-image:
-    repeating-conic-gradient(
-      from 45deg,
-      color-mix(in oklab, var(--rose) 26%, transparent) 0deg 90deg,
-      transparent 90deg 180deg
-    ),
-    repeating-conic-gradient(
-      from 0deg,
-      color-mix(in oklab, var(--gold) 22%, transparent) 0deg 90deg,
-      transparent 90deg 180deg
-    );
-  background-size:
-    28px 28px,
-    28px 28px;
-  background-position:
-    0 0,
-    14px 14px;
-}
-
-@utility zellige-star {
-  background-image:
-    linear-gradient(45deg, color-mix(in oklab, var(--gold) 30%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--gold) 30%, transparent) 75%),
-    linear-gradient(45deg, color-mix(in oklab, var(--rose) 28%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--rose) 28%, transparent) 75%);
-  background-size: 36px 36px;
-  background-position: 0 0, 18px 18px;
 }
 
 @utility scroll-x {

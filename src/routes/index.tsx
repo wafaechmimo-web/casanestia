@@ -14,6 +14,7 @@ import {
   Vision,
   Contact,
 } from "@/components/site/Sections";
+import { Estimate } from "@/components/site/Estimate";
 import { Footer } from "@/components/site/Footer";
 import { content, type Lang } from "@/content/casa-nestia";
 
@@ -64,6 +65,7 @@ function Index() {
         <Reviews copy={copy} />
         <Reseau copy={copy} />
         <Vision copy={copy} />
+        <Estimate copy={copy} />
         <Contact copy={copy} />
       </main>
       <Footer copy={copy} />
