@@ -248,31 +248,38 @@ export function Reviews({ copy }: { copy: Copy }) {
 
 export function Reseau({ copy }: { copy: Copy }) {
   return (
-    <section className="border-y border-border bg-secondary/60">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-6 py-20 md:grid-cols-12 md:px-10 md:py-24">
-        <div className="md:col-span-4">
+    <section className="bg-reseau-black px-6 py-20 md:px-10 md:py-24">
+      <div className="mx-auto grid max-w-[1100px] overflow-hidden rounded-lg border border-reseau-gold/60 md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center bg-white px-8 py-16">
           <img
             src={reseauLogo}
-            alt="Le Réseau — certification"
+            alt="Le Réseau"
             width={2514}
             height={1058}
             loading="lazy"
-            className="h-20 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
-          <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-primary">
-            {copy.reseau.label}
+          <p className="mt-8 text-center text-sm font-semibold text-reseau-black">
+            {copy.reseau.tagline}
           </p>
         </div>
-        <div className="md:col-span-7 md:col-start-6">
-          <h2 className="font-display text-[1.8rem] leading-[1.2] md:text-[2.4rem]">
+        <div className="bg-reseau-black px-8 py-12 md:px-10">
+          <span className="inline-flex items-center gap-2 rounded-full bg-reseau-gold px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.12em] text-reseau-black">
+            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-reseau-black text-[0.6rem] text-reseau-gold">
+              ✓
+            </span>
+            {copy.reseau.badge}
+          </span>
+          <h2 className="mt-6 text-[2rem] font-extrabold leading-[1.1] text-white md:text-[2.6rem]">
             {copy.reseau.title}
           </h2>
-          <p className="mt-6 text-[0.97rem] leading-[1.9] text-muted-foreground">
-            {copy.reseau.body}
-          </p>
-          <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3">
+          <p className="mt-6 text-[0.9rem] leading-[1.8] text-white/70">{copy.reseau.body}</p>
+          <ul className="mt-8 flex flex-wrap gap-3">
             {copy.reseau.items.map((it) => (
-              <li key={it} className="text-[0.68rem] uppercase tracking-[0.22em] text-foreground/70">
+              <li
+                key={it}
+                className="rounded-md border border-white/25 px-4 py-2 text-[0.78rem] text-white/90"
+              >
                 {it}
               </li>
             ))}
