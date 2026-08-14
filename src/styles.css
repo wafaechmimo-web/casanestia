@@ -43,6 +43,8 @@
   --color-gold: var(--gold);
   --color-ivory: var(--ivory);
   --color-anthracite: var(--anthracite);
+  --color-reseau-black: var(--reseau-black);
+  --color-reseau-gold: var(--reseau-gold);
 }
 
 :root {
