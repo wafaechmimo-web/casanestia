@@ -43,6 +43,8 @@
   --color-gold: var(--gold);
   --color-ivory: var(--ivory);
   --color-anthracite: var(--anthracite);
+  --color-reseau-black: var(--reseau-black);
+  --color-reseau-gold: var(--reseau-gold);
 }
 
 :root {
@@ -55,6 +57,9 @@
   --gold: oklch(0.741 0.082 80.9);
   --ivory: oklch(0.972 0.016 84);
   --anthracite: oklch(0.262 0.005 67.6);
+  --reseau-black: oklch(0.145 0 0);
+  --reseau-gold: oklch(0.82 0.16 88);
+
 
   --background: var(--ivory);
   --foreground: var(--anthracite);
