@@ -164,8 +164,8 @@ export const content = {
     },
     reseau: {
       label: "✓ Certifié par Le Réseau",
-      title: "Membre d'un réseau de conciergeries d'excellence",
-      body: "Cette conciergerie fait partie d'un écosystème de professionnels sélectionnés autour de standards de qualité rigoureux, d'un partage de bonnes pratiques et d'un engagement commun envers l'hospitalité.",
+      title: "Membre d’un réseau de conciergeries d’excellence",
+      body: "Cette conciergerie fait partie d’un écosystème de professionnels sélectionnés autour de standards de qualité rigoureux, d’un partage de bonnes pratiques et d’un engagement commun envers l’hospitalité.",
       items: ["Standards de qualité", "Réseau professionnel", "Confiance et excellence"],
       note: "",
     },
