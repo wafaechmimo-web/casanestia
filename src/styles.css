@@ -39,6 +39,7 @@
   --color-rose: var(--rose);
   --color-rose-deep: var(--rose-deep);
   --color-rose-soft: var(--rose-soft);
+  --color-rose-gold: var(--rose-gold);
   --color-gold: var(--gold);
   --color-ivory: var(--ivory);
   --color-anthracite: var(--anthracite);
@@ -50,6 +51,7 @@
   --rose: oklch(0.652 0.098 22.5);
   --rose-deep: oklch(0.578 0.104 23.5);
   --rose-soft: oklch(0.812 0.056 24);
+  --rose-gold: oklch(0.72 0.075 22.5);
   --gold: oklch(0.741 0.082 80.9);
   --ivory: oklch(0.972 0.016 84);
   --anthracite: oklch(0.262 0.005 67.6);
