@@ -94,6 +94,59 @@ export const content = {
       ],
     },
 
+    process: {
+      eyebrow: "Fonctionnement",
+      title: "4 étapes pour passer le relais en toute confiance",
+      body: "Un parcours simple, du premier échange à la gestion quotidienne de votre bien.",
+      steps: [
+        {
+          name: "Estimation gratuite",
+          body: "On étudie votre bien et votre secteur pour estimer vos revenus potentiels sous 48h.",
+        },
+        {
+          name: "Visite & mise en place",
+          body: "Shooting photo, rédaction de l'annonce et installation des équipements nécessaires.",
+        },
+        {
+          name: "Mise en ligne",
+          body: "Diffusion multi-plateformes et gestion des premières réservations dès la première semaine.",
+        },
+        {
+          name: "Gestion au quotidien",
+          body: "Accueil, ménage, support voyageurs et reporting mensuel — vous n'avez plus rien à gérer.",
+        },
+      ],
+    },
+    faq: {
+      eyebrow: "Questions fréquentes",
+      title: "Tout ce que nos propriétaires nous demandent",
+      items: [
+        {
+          q: "Comment estimez-vous mes revenus potentiels ?",
+          a: "Nous analysons votre bien (localisation, surface, équipements) ainsi que les données de réservation constatées sur des biens comparables du secteur pour vous fournir une estimation réaliste sous 48h, sans engagement.",
+        },
+        {
+          q: "Quelle commission appliquez-vous et qu'est-ce qui est inclus ?",
+          a: "Notre commission varie de 18 % à 26 % selon la formule choisie, sans frais cachés. Elle couvre a minima l'annonce, la diffusion multi-plateformes, la tarification dynamique et le support voyageurs 24/7.",
+        },
+        {
+          q: "Comment gérez-vous le ménage et le linge entre chaque séjour ?",
+          a: "Une équipe de ménage professionnelle intervient systématiquement entre deux séjours, avec un contrôle qualité par photos et un linge hôtelier fourni et blanchi par nos soins.",
+        },
+        {
+          q: "Puis-je garder l'usage de mon bien pour mes propres vacances ?",
+          a: "Bien sûr. Vous nous indiquez vos dates de blocage à l'avance directement depuis votre tableau de bord, et nous ajustons le calendrier de réservation en conséquence.",
+        },
+        {
+          q: "Sur quelles plateformes diffusez-vous mon annonce ?",
+          a: "Votre bien est diffusé simultanément sur Airbnb, Booking.com et Abritel, avec un calendrier synchronisé pour éviter tout risque de double réservation.",
+        },
+        {
+          q: "Que se passe-t-il en cas de problème pendant le séjour d'un voyageur ?",
+          a: "Notre hotline est disponible 24/7. En cas d'imprévu (panne, question pratique, météo), un membre de l'équipe intervient ou coordonne un artisan local sans que vous ayez à intervenir.",
+        },
+      ],
+    },
     values: {
       eyebrow: "Valeurs",
       title: "Trois principes, sans compromis.",
@@ -203,10 +256,24 @@ export const content = {
     },
     footer: {
       tagline: "Conciergerie & Gestion Immobilière",
+      brand: "Casa Nestia : Prendre soin de votre bien comme s'il était le nôtre, avec excellence et confiance.",
       location: "Marrakech · Maroc",
       scope: "Locations courte & longue durée",
+      navTitle: "Navigation",
+      navLinks: [
+        { label: "Services", href: "#services" },
+        { label: "Fonctionnement", href: "#fonctionnement" },
+        { label: "Résultats", href: "#resultats" },
+        { label: "Secteurs", href: "#secteurs" },
+        { label: "FAQ", href: "#faq" },
+      ],
+      zoneTitle: "Zone couverte",
+      zone: ["Marrakech", "Casablanca", "Essaouira", "Bouskoura", "Rabat", "Agadir"],
+      contactTitle: "Contact",
       legal: "Mentions légales",
       privacy: "Politique de confidentialité",
+      cgv: "CGV",
+      reseau: "Cette conciergerie est membre du Réseau",
       rights: "Tous droits réservés.",
     },
   },
@@ -299,6 +366,59 @@ export const content = {
       ],
     },
 
+    process: {
+      eyebrow: "How it works",
+      title: "Four steps to hand over with complete confidence",
+      body: "A simple journey, from the first conversation to the day-to-day management of your property.",
+      steps: [
+        {
+          name: "Free estimate",
+          body: "We study your property and your area to estimate your potential revenue within 48h.",
+        },
+        {
+          name: "Visit & setup",
+          body: "Photo shoot, listing copywriting and installation of the necessary equipment.",
+        },
+        {
+          name: "Going live",
+          body: "Multi-platform publishing and handling of the first bookings from the very first week.",
+        },
+        {
+          name: "Day-to-day management",
+          body: "Check-in, housekeeping, guest support and monthly reporting — you have nothing left to manage.",
+        },
+      ],
+    },
+    faq: {
+      eyebrow: "Frequently asked questions",
+      title: "Everything our owners ask us",
+      items: [
+        {
+          q: "How do you estimate my potential revenue?",
+          a: "We analyse your property (location, surface area, amenities) along with booking data observed on comparable properties in the area to provide a realistic estimate within 48h, with no commitment.",
+        },
+        {
+          q: "What commission do you charge and what is included?",
+          a: "Our commission ranges from 18% to 26% depending on the plan chosen, with no hidden fees. It covers at minimum the listing, multi-platform distribution, dynamic pricing and 24/7 guest support.",
+        },
+        {
+          q: "How do you handle housekeeping and linen between stays?",
+          a: "A professional housekeeping team systematically works between two stays, with photo-based quality control and hotel-grade linen supplied and laundered by us.",
+        },
+        {
+          q: "Can I keep using my property for my own holidays?",
+          a: "Of course. You give us your blocked dates in advance directly from your dashboard, and we adjust the booking calendar accordingly.",
+        },
+        {
+          q: "Which platforms do you list my property on?",
+          a: "Your property is published simultaneously on Airbnb, Booking.com and Abritel, with a synchronised calendar to avoid any risk of double booking.",
+        },
+        {
+          q: "What happens if there is a problem during a guest's stay?",
+          a: "Our hotline is available 24/7. In case of an unexpected issue (breakdown, practical question, weather), a team member steps in or coordinates a local craftsman without you having to intervene.",
+        },
+      ],
+    },
     values: {
       eyebrow: "Values",
       title: "Three principles, without compromise.",
@@ -406,10 +526,24 @@ export const content = {
     },
     footer: {
       tagline: "Property Concierge & Management",
+      brand: "Casa Nestia: caring for your property as if it were our own, with excellence and trust.",
       location: "Marrakech · Morocco",
       scope: "Short & long-term rentals",
+      navTitle: "Navigation",
+      navLinks: [
+        { label: "Services", href: "#services" },
+        { label: "How it works", href: "#fonctionnement" },
+        { label: "Results", href: "#resultats" },
+        { label: "Areas", href: "#secteurs" },
+        { label: "FAQ", href: "#faq" },
+      ],
+      zoneTitle: "Areas covered",
+      zone: ["Marrakech", "Casablanca", "Essaouira", "Bouskoura", "Rabat", "Agadir"],
+      contactTitle: "Contact",
       legal: "Legal notice",
       privacy: "Privacy policy",
+      cgv: "Terms of sale",
+      reseau: "This concierge service is a member of Le Réseau",
       rights: "All rights reserved.",
     },
   },
