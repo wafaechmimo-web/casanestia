@@ -12,7 +12,8 @@ import {
   Reviews,
   Reseau,
   Vision,
-  Contact,
+  Process,
+  Faq,
 } from "@/components/site/Sections";
 import { Estimate } from "@/components/site/Estimate";
 import { Footer } from "@/components/site/Footer";
@@ -59,14 +60,15 @@ function Index() {
         <Story copy={copy} />
         <Expertise copy={copy} />
         <Services copy={copy} />
+        <Process copy={copy} />
         <Cities copy={copy} />
         <Values copy={copy} />
         <Results copy={copy} />
         <Reviews copy={copy} />
         <Reseau copy={copy} />
         <Vision copy={copy} />
+        <Faq copy={copy} />
         <Estimate copy={copy} />
-        <Contact copy={copy} />
       </main>
       <Footer copy={copy} />
     </div>
