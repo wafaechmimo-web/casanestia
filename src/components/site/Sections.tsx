@@ -1,3 +1,4 @@
+import { useState } from "react";
 import storyImg from "@/assets/story.jpg";
 import servicesImg from "@/assets/services.jpg";
 import visionImg from "@/assets/vision.jpg";
@@ -183,7 +184,7 @@ export function Values({ copy }: { copy: Copy }) {
 
 export function Results({ copy }: { copy: Copy }) {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+    <section id="resultats" className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
       <div className="grid gap-10 md:grid-cols-12">
         <div className="md:col-span-4">
           <p className="eyebrow">{copy.results.eyebrow}</p>
@@ -369,6 +370,95 @@ export function Contact({ copy }: { copy: Copy }) {
             </p>
             <p className="mt-3 font-display text-xl">{copy.contact.address}</p>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Process({ copy }: { copy: Copy }) {
+  return (
+    <section id="fonctionnement" className="border-y border-border bg-secondary/40">
+      <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="eyebrow">{copy.process.eyebrow}</p>
+            <h2 className="mt-6 font-display text-[2rem] leading-[1.15] md:text-[2.7rem]">
+              {copy.process.title}
+            </h2>
+          </div>
+          <div className="md:col-span-6 md:col-start-7 md:self-end">
+            <p className="text-[0.97rem] leading-[1.9] text-muted-foreground">{copy.process.body}</p>
+          </div>
+        </div>
+
+        <ol className="mt-16 grid gap-px bg-border md:grid-cols-4">
+          {copy.process.steps.map((step, i) => (
+            <li key={step.name} className="bg-background px-8 py-12">
+              <span className="font-display text-4xl text-primary/70">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-6 text-[0.8rem] uppercase tracking-[0.24em] text-primary">
+                {step.name}
+              </h3>
+              <p className="mt-4 text-[0.93rem] leading-[1.85] text-muted-foreground">{step.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+export function Faq({ copy }: { copy: Copy }) {
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <section id="faq" className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+      <div className="grid gap-12 md:grid-cols-12">
+        <div className="md:col-span-4">
+          <p className="eyebrow">{copy.faq.eyebrow}</p>
+          <h2 className="mt-6 font-display text-[2rem] leading-[1.15] md:text-[2.6rem]">
+            {copy.faq.title}
+          </h2>
+        </div>
+        <div className="md:col-span-7 md:col-start-6">
+          <dl>
+            {copy.faq.items.map((item, i) => {
+              const isOpen = open === i;
+              return (
+                <div key={item.q} className="border-t border-border last:border-b">
+                  <dt>
+                    <button
+                      type="button"
+                      onClick={() => setOpen(isOpen ? null : i)}
+                      aria-expanded={isOpen}
+                      className="flex w-full items-baseline justify-between gap-6 py-6 text-left"
+                    >
+                      <span
+                        className={`text-[1rem] leading-relaxed transition-colors ${
+                          isOpen ? "text-primary" : "text-foreground/85 hover:text-primary"
+                        }`}
+                      >
+                        {item.q}
+                      </span>
+                      <span className="shrink-0 font-display text-xl text-primary/70">
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+                  </dt>
+                  <dd
+                    className={`grid transition-all duration-300 ${
+                      isOpen ? "grid-rows-[1fr] pb-8" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <p className="overflow-hidden pr-10 text-[0.93rem] leading-[1.9] text-muted-foreground">
+                      {item.a}
+                    </p>
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
         </div>
       </div>
     </section>
