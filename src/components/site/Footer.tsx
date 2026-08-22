@@ -5,7 +5,7 @@ export function Footer({ copy }: { copy: Copy }) {
   return (
     <footer className="border-t border-rose-gold/30 bg-rose-gold text-anthracite">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-12 md:px-10">
-        <div className="md:col-span-5">
+        <div className="md:col-span-4">
           <img
             src={logoAsset.url}
             alt="Casa Nestia"
@@ -14,19 +14,44 @@ export function Footer({ copy }: { copy: Copy }) {
             loading="lazy"
             className="h-20 w-auto"
           />
-          <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-anthracite/90">
+          <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-anthracite">
             Casa Nestia
           </p>
-          <p className="mt-2 text-sm text-anthracite/80">{copy.footer.tagline}</p>
-          <p className="mt-1 text-sm text-anthracite/80">{copy.footer.location}</p>
-          <p className="mt-1 text-sm text-anthracite/80">{copy.footer.scope}</p>
+          <p className="mt-4 max-w-xs text-sm leading-[1.8] text-anthracite/80">
+            {copy.footer.brand}
+          </p>
         </div>
 
-        <div className="md:col-span-3 md:col-start-7">
+        <div className="md:col-span-2 md:col-start-6">
           <p className="text-[0.65rem] uppercase tracking-[0.24em] text-anthracite">
-            {copy.contact.eyebrow}
+            {copy.footer.navTitle}
+          </p>
+          <nav className="mt-4 space-y-2 text-sm text-anthracite/80">
+            {copy.footer.navLinks.map((link) => (
+              <a key={link.label} href={link.href} className="block hover:text-anthracite">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div className="md:col-span-2">
+          <p className="text-[0.65rem] uppercase tracking-[0.24em] text-anthracite">
+            {copy.footer.zoneTitle}
+          </p>
+          <ul className="mt-4 space-y-2 text-sm text-anthracite/80">
+            {copy.footer.zone.map((z) => (
+              <li key={z}>{z}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-3 md:col-start-10">
+          <p className="text-[0.65rem] uppercase tracking-[0.24em] text-anthracite">
+            {copy.footer.contactTitle}
           </p>
           <div className="mt-4 space-y-2 text-sm text-anthracite/80">
+            <p>{copy.footer.location}</p>
             <a href={`tel:${PHONE_MA.replace(/\s/g, "")}`} className="block hover:text-anthracite">
               {PHONE_MA}
             </a>
@@ -38,26 +63,29 @@ export function Footer({ copy }: { copy: Copy }) {
             </a>
           </div>
         </div>
+      </div>
 
-        <div className="md:col-span-3 md:col-start-10">
-          <p className="text-[0.65rem] uppercase tracking-[0.24em] text-anthracite">
-            {copy.reseau.label}
-          </p>
-          <div className="mt-4 space-y-2 text-sm text-anthracite/80">
-            <a href="#" className="block hover:text-anthracite">
+      <div className="border-t border-anthracite/10">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-3 px-6 py-6 text-[0.65rem] uppercase tracking-[0.2em] text-anthracite/80 md:flex-row md:items-center md:justify-between md:px-10">
+          <span>© {new Date().getFullYear()} Casa Nestia</span>
+          <div className="flex flex-wrap gap-6">
+            <a href="#" className="hover:text-anthracite">
               {copy.footer.legal}
             </a>
-            <a href="#" className="block hover:text-anthracite">
+            <a href="#" className="hover:text-anthracite">
               {copy.footer.privacy}
+            </a>
+            <a href="#" className="hover:text-anthracite">
+              {copy.footer.cgv}
             </a>
           </div>
         </div>
       </div>
+
       <div className="border-t border-anthracite/10">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-6 py-6 text-[0.65rem] uppercase tracking-[0.2em] text-anthracite/80 md:flex-row md:justify-between md:px-10">
-          <span>© {new Date().getFullYear()} Casa Nestia</span>
-          <span>{copy.footer.rights}</span>
-        </div>
+        <p className="mx-auto max-w-[1400px] px-6 py-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-anthracite/80 md:px-10">
+          {copy.footer.reseau}
+        </p>
       </div>
     </footer>
   );
