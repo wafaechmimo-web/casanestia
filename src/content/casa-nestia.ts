@@ -8,11 +8,11 @@ export const content = {
   fr: {
     nav: {
       home: "Accueil",
-      about: "Casa Nestia",
-      expertise: "Expertise",
       services: "Services",
-      vision: "Vision",
-      contact: "Contact",
+      fonctionnement: "Fonctionnement",
+      resultats: "Résultats",
+      secteurs: "Secteurs",
+      faq: "FAQ",
       cta: "Demander un audit gratuit",
     },
     hero: {
@@ -273,18 +273,17 @@ export const content = {
       legal: "Mentions légales",
       privacy: "Politique de confidentialité",
       cgv: "CGV",
-      reseau: "Cette conciergerie est membre du Réseau",
       rights: "Tous droits réservés.",
     },
   },
   en: {
     nav: {
       home: "Home",
-      about: "Casa Nestia",
-      expertise: "Expertise",
       services: "Services",
-      vision: "Vision",
-      contact: "Contact",
+      fonctionnement: "How it works",
+      resultats: "Results",
+      secteurs: "Areas",
+      faq: "FAQ",
       cta: "Request a free audit",
     },
     hero: {
@@ -543,7 +542,6 @@ export const content = {
       legal: "Legal notice",
       privacy: "Privacy policy",
       cgv: "Terms of sale",
-      reseau: "This concierge service is a member of Le Réseau",
       rights: "All rights reserved.",
     },
   },
