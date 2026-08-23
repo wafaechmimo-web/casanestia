@@ -4,11 +4,11 @@ import type { Copy, Lang } from "@/content/casa-nestia";
 
 const LINKS = [
   { key: "home", href: "#accueil" },
-  { key: "about", href: "#casa-nestia" },
-  { key: "expertise", href: "#expertise" },
   { key: "services", href: "#services" },
-  { key: "vision", href: "#vision" },
-  { key: "contact", href: "#contact" },
+  { key: "fonctionnement", href: "#fonctionnement" },
+  { key: "resultats", href: "#resultats" },
+  { key: "secteurs", href: "#secteurs" },
+  { key: "faq", href: "#faq" },
 ] as const;
 
 export function Nav({
