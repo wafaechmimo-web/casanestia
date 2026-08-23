@@ -80,12 +80,6 @@ export function Footer({ copy }: { copy: Copy }) {
           </div>
         </div>
       </div>
-
-      <div className="border-t border-anthracite/10">
-        <p className="mx-auto max-w-[1400px] px-6 py-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-anthracite/80 md:px-10">
-          {copy.footer.reseau}
-        </p>
-      </div>
     </footer>
   );
 }
