@@ -6,18 +6,17 @@ export function Footer({ copy }: { copy: Copy }) {
     <footer className="border-t border-rose-gold/30 bg-rose-gold text-anthracite">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-12 md:px-10">
         <div className="md:col-span-4">
-          <img
-            src={logoAsset.url}
-            alt="Casa Nestia"
-            width={120}
-            height={120}
-            loading="lazy"
-            className="h-20 w-auto"
-          />
-          <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-anthracite">
-            Casa Nestia
-          </p>
-          <p className="mt-4 max-w-xs text-sm leading-[1.8] text-anthracite/80">
+          <div className="inline-flex bg-ivory px-6 py-4">
+            <img
+              src={logoAsset.url}
+              alt="Casa Nestia"
+              width={120}
+              height={120}
+              loading="lazy"
+              className="h-20 w-auto"
+            />
+          </div>
+          <p className="mt-6 max-w-xs text-sm leading-[1.8] text-anthracite/80">
             {copy.footer.brand}
           </p>
         </div>
