@@ -17,6 +17,8 @@ import {
 } from "@/components/site/Sections";
 import { Estimate } from "@/components/site/Estimate";
 import { Footer } from "@/components/site/Footer";
+import { Reveal } from "@/components/site/Reveal";
+import { Ambience } from "@/components/site/Ambience";
 import { content, type Lang } from "@/content/casa-nestia";
 
 export const Route = createFileRoute("/")({
