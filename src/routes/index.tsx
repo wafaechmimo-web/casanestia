@@ -17,6 +17,8 @@ import {
 } from "@/components/site/Sections";
 import { Estimate } from "@/components/site/Estimate";
 import { Footer } from "@/components/site/Footer";
+import { Reveal } from "@/components/site/Reveal";
+import { Ambience } from "@/components/site/Ambience";
 import { content, type Lang } from "@/content/casa-nestia";
 
 export const Route = createFileRoute("/")({
@@ -57,20 +59,45 @@ function Index() {
       <Nav copy={copy} lang={lang} setLang={setLang} />
       <main>
         <Hero copy={copy} />
-        <Story copy={copy} />
-        <Expertise copy={copy} />
-        <Services copy={copy} />
-        <Process copy={copy} />
-        <Cities copy={copy} />
-        <Values copy={copy} />
-        <Results copy={copy} />
-        <Reviews copy={copy} />
-        <Reseau copy={copy} />
-        <Vision copy={copy} />
-        <Faq copy={copy} />
-        <Estimate copy={copy} />
+        <Reveal>
+          <Story copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Expertise copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Services copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Process copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Cities copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Values copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Results copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Reviews copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Reseau copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Vision copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Faq copy={copy} />
+        </Reveal>
+        <Reveal>
+          <Estimate copy={copy} />
+        </Reveal>
       </main>
       <Footer copy={copy} />
+      <Ambience label={lang === "fr" ? "Activer ou couper la musique" : "Toggle background music"} />
     </div>
   );
 }

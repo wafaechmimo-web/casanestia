@@ -4,6 +4,13 @@ export const PHONE_MA = "+212 783 419 978";
 export const PHONE_FR = "+33 7 46 33 15 07";
 export const EMAIL = "casa.nestia.immobilier@gmail.com";
 
+/**
+ * Ambient background music.
+ * Upload the audio file (mp3) and paste its URL here to activate the player.
+ * Leave empty to hide the sound control entirely.
+ */
+export const AMBIENCE_URL = "";
+
 export const content = {
   fr: {
     nav: {

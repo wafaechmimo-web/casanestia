@@ -127,20 +127,22 @@ export function Cities({ copy }: { copy: Copy }) {
         </h2>
       </div>
 
-      <div className="scroll-x mt-14 gap-6 px-6 pb-4 md:px-10">
+      <div className="scroll-x depth-scene mt-14 gap-6 px-6 pb-8 md:px-10">
         {copy.cities.list.map((city, i) => (
           <article
             key={city.name}
-            className="w-[78vw] shrink-0 snap-start sm:w-[46vw] lg:w-[30vw] xl:w-[24rem]"
+            className="depth-card w-[78vw] shrink-0 snap-start sm:w-[46vw] lg:w-[30vw] xl:w-[24rem]"
           >
-            <img
-              src={CITY_IMAGES[i]}
-              alt={`${city.name}, ${city.country}`}
-              width={1200}
-              height={1504}
-              loading="lazy"
-              className="h-[380px] w-full object-cover md:h-[460px]"
-            />
+            <div className="depth-card-media h-[380px] w-full md:h-[460px]">
+              <img
+                src={CITY_IMAGES[i]}
+                alt={`${city.name}, ${city.country}`}
+                width={1200}
+                height={1504}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
             <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-border pt-4">
               <h3 className="font-display text-2xl">{city.name}</h3>
               <span className="text-[0.62rem] uppercase tracking-[0.22em] text-primary">
