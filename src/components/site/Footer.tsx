@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-n.png.asset.json";
 import { EMAIL, PHONE_FR, PHONE_MA, type Copy } from "@/content/casa-nestia";
 
 export function Footer({ copy }: { copy: Copy }) {
