@@ -9,7 +9,7 @@ import rabatImg from "@/assets/city-rabat.jpg";
 import bouskouraImg from "@/assets/city-bouskoura.jpg";
 import agadirImg from "@/assets/city-agadir.jpg";
 import reseauLogo from "@/assets/le-reseau-logo.png";
-import signatureAsset from "@/assets/signature.png.asset.json";
+import signatureAsset from "@/assets/signature-ivory.png.asset.json";
 import { EMAIL, PHONE_FR, PHONE_MA, type Copy } from "@/content/casa-nestia";
 
 const CITY_IMAGES = [marrakechImg, casablancaImg, essaouiraImg, bouskouraImg, rabatImg, agadirImg];
