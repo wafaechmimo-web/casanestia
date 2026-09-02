@@ -1,3 +1,5 @@
+import ambienceAsset from "@/assets/ambience.mp3.asset.json";
+
 export type Lang = "fr" | "en";
 
 export const PHONE_MA = "+212 783 419 978";
@@ -9,7 +11,7 @@ export const EMAIL = "casa.nestia.immobilier@gmail.com";
  * Upload the audio file (mp3) and paste its URL here to activate the player.
  * Leave empty to hide the sound control entirely.
  */
-export const AMBIENCE_URL = "";
+export const AMBIENCE_URL = ambienceAsset.url;
 
 export const content = {
   fr: {
