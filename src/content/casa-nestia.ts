@@ -1,3 +1,5 @@
+import ambienceAsset from "@/assets/ambience.mp3.asset.json";
+
 export type Lang = "fr" | "en";
 
 export const PHONE_MA = "+212 783 419 978";
