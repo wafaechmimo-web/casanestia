@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/logo-mark.png.asset.json";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { LANGS, type Copy, type Lang } from "@/content/casa-nestia";
 
 const LINKS = [
