@@ -22,6 +22,7 @@ export function Nav({
 }) {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 40);
@@ -62,28 +63,67 @@ export function Nav({
         </div>
 
         <div className="flex items-center gap-5">
-          <div className="flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.2em]">
-            {LANGS.map((l, i) => (
-              <span key={l.code} className="flex items-center gap-2">
-                {i > 0 && <span className="text-border">|</span>}
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setLangOpen((o) => !o)}
+              aria-haspopup="listbox"
+              aria-expanded={langOpen}
+              aria-label="Langue"
+              className={`flex items-center gap-1.5 text-[0.68rem] uppercase tracking-[0.2em] transition-colors ${
+                solid
+                  ? "text-foreground/80 hover:text-foreground"
+                  : "text-background/80 hover:text-background"
+              }`}
+            >
+              {LANGS.find((l) => l.code === lang)?.label}
+              <svg
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                fill="none"
+                className={`transition-transform ${langOpen ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              >
+                <path d="M1 1l3 3 3-3" stroke="currentColor" strokeWidth="1.2" />
+              </svg>
+            </button>
+            {langOpen && (
+              <>
                 <button
                   type="button"
-                  onClick={() => setLang(l.code)}
-                  className={
-                    lang === l.code
-                      ? solid
-                        ? "text-primary"
-                        : "text-rose-soft"
-                      : solid
-                        ? "text-muted-foreground transition-colors hover:text-foreground"
-                        : "text-background/60 transition-colors hover:text-background"
-                  }
-                  aria-pressed={lang === l.code}
+                  className="fixed inset-0 z-40 cursor-default"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  onClick={() => setLangOpen(false)}
+                />
+                <ul
+                  role="listbox"
+                  className="absolute end-0 top-full z-50 mt-2 min-w-[4.5rem] border border-border bg-background py-1 shadow-lg"
                 >
-                  {l.label}
-                </button>
-              </span>
-            ))}
+                  {LANGS.map((l) => (
+                    <li key={l.code}>
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={lang === l.code}
+                        onClick={() => {
+                          setLang(l.code);
+                          setLangOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-start text-[0.68rem] uppercase tracking-[0.2em] transition-colors ${
+                          lang === l.code
+                            ? "text-primary"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        {l.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
           <a href="#contact" className="btn-rose hidden md:inline-flex">
             {copy.nav.cta}
