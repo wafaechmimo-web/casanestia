@@ -67,8 +67,6 @@ export function Ambience({ label }: { label: string }) {
     return remove;
   }, []);
 
-  if (!ready) return null;
-
   const toggle = () => {
     const a = audioRef.current;
     if (!a) return;
@@ -85,6 +83,7 @@ export function Ambience({ label }: { label: string }) {
   return (
     <>
       <audio ref={audioRef} src={AMBIENCE_URL} loop preload="auto" playsInline />
+      {ready && (
       <button
         type="button"
         onClick={toggle}
@@ -105,6 +104,7 @@ export function Ambience({ label }: { label: string }) {
           ))}
         </span>
       </button>
+      )}
     </>
   );
 }
