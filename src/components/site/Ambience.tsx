@@ -15,24 +15,28 @@ export function Ambience({ label }: { label: string }) {
     if (!AMBIENCE_URL) return;
     setReady(true);
 
+    const fadeIn = () => {
+      let v = audioRef.current?.volume ?? 0;
+      const id = window.setInterval(() => {
+        v = Math.min(0.35, v + 0.02);
+        if (audioRef.current) audioRef.current.volume = v;
+        if (v >= 0.35) window.clearInterval(id);
+      }, 120);
+    };
+
     const start = () => {
       const a = audioRef.current;
       if (!a) return;
+      a.muted = false;
       a.volume = 0;
       void a
         .play()
         .then(() => {
           setPlaying(true);
-          // gentle fade-in
-          let v = 0;
-          const id = window.setInterval(() => {
-            v = Math.min(0.35, v + 0.02);
-            if (audioRef.current) audioRef.current.volume = v;
-            if (v >= 0.35) window.clearInterval(id);
-          }, 120);
+          fadeIn();
+          remove();
         })
         .catch(() => setPlaying(false));
-      remove();
     };
 
     const remove = () => {
@@ -41,18 +45,33 @@ export function Ambience({ label }: { label: string }) {
       window.removeEventListener("touchstart", start);
     };
 
+    // Try to autoplay right away (browsers only allow this while muted),
+    // then unmute and fade in as soon as it is permitted.
+    const a = audioRef.current;
+    if (a) {
+      a.muted = true;
+      a.volume = 0;
+      void a
+        .play()
+        .then(() => {
+          setPlaying(true);
+          a.muted = false;
+          fadeIn();
+        })
+        .catch(() => setPlaying(false));
+    }
+
     window.addEventListener("pointerdown", start);
     window.addEventListener("keydown", start);
     window.addEventListener("touchstart", start);
     return remove;
   }, []);
 
-  if (!ready) return null;
-
   const toggle = () => {
     const a = audioRef.current;
     if (!a) return;
     if (a.paused) {
+      a.muted = false;
       a.volume = 0.35;
       void a.play().then(() => setPlaying(true));
     } else {
@@ -63,7 +82,8 @@ export function Ambience({ label }: { label: string }) {
 
   return (
     <>
-      <audio ref={audioRef} src={AMBIENCE_URL} loop preload="none" />
+      <audio ref={audioRef} src={AMBIENCE_URL} loop preload="auto" playsInline />
+      {ready && (
       <button
         type="button"
         onClick={toggle}
@@ -84,6 +104,7 @@ export function Ambience({ label }: { label: string }) {
           ))}
         </span>
       </button>
+      )}
     </>
   );
 }
