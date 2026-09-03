@@ -52,6 +52,7 @@ function Index() {
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   }, [lang]);
 
   return (
@@ -97,7 +98,7 @@ function Index() {
         </Reveal>
       </main>
       <Footer copy={copy} />
-      <Ambience label={lang === "fr" ? "Activer ou couper la musique" : "Toggle background music"} />
+      <Ambience label={lang === "en" ? "Toggle background music" : "Activer ou couper la musique"} />
     </div>
   );
 }

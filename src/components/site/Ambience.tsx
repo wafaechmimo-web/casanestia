@@ -73,6 +73,7 @@ export function Ambience({ label }: { label: string }) {
     const a = audioRef.current;
     if (!a) return;
     if (a.paused) {
+      a.muted = false;
       a.volume = 0.35;
       void a.play().then(() => setPlaying(true));
     } else {
@@ -83,7 +84,7 @@ export function Ambience({ label }: { label: string }) {
 
   return (
     <>
-      <audio ref={audioRef} src={AMBIENCE_URL} loop preload="none" />
+      <audio ref={audioRef} src={AMBIENCE_URL} loop preload="auto" playsInline />
       <button
         type="button"
         onClick={toggle}
