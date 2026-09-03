@@ -1,6 +1,6 @@
 import ambienceAsset from "@/assets/ambience.mp3.asset.json";
 
-export type Lang = "fr" | "en";
+export type Lang = "fr" | "en" | "ar" | "am";
 
 export const PHONE_MA = "+212 783 419 978";
 export const PHONE_FR = "+33 7 46 33 15 07";
@@ -868,7 +868,7 @@ export const content = {
       list: [
         {
           name: "ⵎⵕⵕⴰⴽⵛ",
-          country: "ⵍⵎⵖⵔⵉ�ter",
+          country: "ⵍⵎⵖⵔⵉⴱ",
           status: "ⵜⴰⵎⵏⴰⴹⵜ ⵜⵓⵙⵙⵉⵏⵜ",
           note: "ⵜⴰⵎⴷⵉⵏⵜ ⵜⴰⵣⴳⴳⵯⴰⵖⵜ, ⵜⴰⵎⵏⴰⴹⵜ ⵜⴰⵎⵣⵡⴰⵔⵓⵜ ⵏ ⵜⵎⵙⵙⴰⵔⵜ ⴳ ⵜⴳⵍⴷⵉⵜ.",
         },
