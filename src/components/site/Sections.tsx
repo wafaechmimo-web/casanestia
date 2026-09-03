@@ -44,7 +44,7 @@ export function Story({ copy }: { copy: Copy }) {
             width={220}
             height={110}
             loading="lazy"
-            className="mt-10 h-14 w-auto opacity-70 mix-blend-multiply"
+            className="mt-10 h-14 w-auto opacity-80"
           />
         </div>
       </div>

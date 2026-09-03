@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
-import type { Copy, Lang } from "@/content/casa-nestia";
+import logoAsset from "@/assets/logo-mark.png.asset.json";
+import { LANGS, type Copy, type Lang } from "@/content/casa-nestia";
 
 const LINKS = [
   { key: "home", href: "#accueil" },
@@ -63,14 +63,14 @@ export function Nav({
 
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.2em]">
-            {(["fr", "en"] as const).map((l, i) => (
-              <span key={l} className="flex items-center gap-2">
-                {i === 1 && <span className="text-border">|</span>}
+            {LANGS.map((l, i) => (
+              <span key={l.code} className="flex items-center gap-2">
+                {i > 0 && <span className="text-border">|</span>}
                 <button
                   type="button"
-                  onClick={() => setLang(l)}
+                  onClick={() => setLang(l.code)}
                   className={
-                    lang === l
+                    lang === l.code
                       ? solid
                         ? "text-primary"
                         : "text-rose-soft"
@@ -78,9 +78,9 @@ export function Nav({
                         ? "text-muted-foreground transition-colors hover:text-foreground"
                         : "text-background/60 transition-colors hover:text-background"
                   }
-                  aria-pressed={lang === l}
+                  aria-pressed={lang === l.code}
                 >
-                  {l.toUpperCase()}
+                  {l.label}
                 </button>
               </span>
             ))}
