@@ -5,6 +5,8 @@ export type Lang = "fr" | "en" | "ar" | "am";
 export const PHONE_MA = "+212 783 419 978";
 export const PHONE_FR = "+33 7 46 33 15 07";
 export const EMAIL = "casa.nestia.immobilier@gmail.com";
+/** WhatsApp number receiving estimate requests (digits only, international format). */
+export const WHATSAPP = "212783419978";
 
 /**
  * Ambient background music.
