@@ -1,20 +1,45 @@
 import { useState } from "react";
-import { EMAIL, type Copy } from "@/content/casa-nestia";
+import { WHATSAPP, type Copy } from "@/content/casa-nestia";
+import { supabase } from "@/integrations/supabase/client";
 
 export function Estimate({ copy }: { copy: Copy }) {
   const c = copy.estimate;
   const [sent, setSent] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [sending, setSending] = useState(false);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (sending) return;
+    setSending(true);
     const data = new FormData(e.currentTarget);
-    const body = [
-      `${c.name}: ${data.get("name")}`,
-      `${c.email}: ${data.get("email")}`,
-      `${c.phone}: ${data.get("phone")}`,
-      `${c.address}: ${data.get("address")}`,
+    const payload = {
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      address: String(data.get("address") ?? ""),
+    };
+
+    // Open the WhatsApp window synchronously-ish so browsers don't block it.
+    const message = [
+      c.formTitle,
+      `${c.name}: ${payload.name}`,
+      `${c.email}: ${payload.email}`,
+      `${c.phone}: ${payload.phone}`,
+      `${c.address}: ${payload.address}`,
     ].join("\n");
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(c.formTitle)}&body=${encodeURIComponent(body)}`;
+    window.open(
+      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+
+    try {
+      await supabase.from("estimate_requests").insert(payload);
+    } catch {
+      /* the WhatsApp message is the primary delivery channel */
+    }
+    setSending(false);
     setSent(true);
   };
 
@@ -73,7 +98,7 @@ export function Estimate({ copy }: { copy: Copy }) {
                 </div>
               ))}
 
-              <button type="submit" className="btn-rose mt-4 w-full">
+              <button type="submit" disabled={sending} className="btn-rose mt-4 w-full disabled:opacity-60">
                 {c.submit}
               </button>
             </form>
