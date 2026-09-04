@@ -125,7 +125,7 @@ export function Nav({
               </>
             )}
           </div>
-          <a href="#contact" className="btn-rose hidden md:inline-flex">
+          <a href="#estimation" className="btn-rose hidden md:inline-flex">
             {copy.nav.cta}
           </a>
           <button
@@ -158,7 +158,7 @@ export function Nav({
                 {copy.nav[l.key]}
               </a>
             ))}
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-rose mt-2 w-full">
+            <a href="#estimation" onClick={() => setOpen(false)} className="btn-rose mt-2 w-full">
               {copy.nav.cta}
             </a>
           </div>

@@ -62,7 +62,7 @@ export function Hero({ copy }: { copy: Copy }) {
             {copy.hero.body}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <a href="#contact" className="btn-rose">
+            <a href="#estimation" className="btn-rose">
               {copy.hero.primary}
             </a>
             <a href="#casa-nestia" className="btn-outline-rose text-background">
