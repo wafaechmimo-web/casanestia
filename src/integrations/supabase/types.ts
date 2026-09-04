@@ -17,6 +17,9 @@ export type Database = {
       estimate_requests: {
         Row: {
           address: string
+          bedrooms: string | null
+          consent_legal: boolean
+          consent_marketing: boolean
           created_at: string
           email: string
           id: string
@@ -25,6 +28,9 @@ export type Database = {
         }
         Insert: {
           address: string
+          bedrooms?: string | null
+          consent_legal?: boolean
+          consent_marketing?: boolean
           created_at?: string
           email: string
           id?: string
@@ -33,6 +39,9 @@ export type Database = {
         }
         Update: {
           address?: string
+          bedrooms?: string | null
+          consent_legal?: boolean
+          consent_marketing?: boolean
           created_at?: string
           email?: string
           id?: string
