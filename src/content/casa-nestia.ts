@@ -264,6 +264,24 @@ export const content = {
       address: "Adresse du bien",
       submit: "Recevoir mon estimation gratuite",
       success: "Merci ! Votre demande a bien été envoyée, nous revenons vers vous sous 48h.",
+      bedrooms: "Nombre de chambres",
+      bedroomsPlaceholder: "– Choisissez –",
+      commissionFrom: "À partir de",
+      commissionValue: "18%",
+      commissionCaption: "de commission",
+      perks: [
+        "Déco et photos de qualité",
+        "Occupation optimisée",
+        "Ménage de qualité hôtel",
+        "Service client 24/24",
+        "10 autres services en plus",
+      ],
+      legalNote:
+        "Conformément à la loi 09-08, vous disposez d'un droit d'accès, de rectification et d'opposition au traitement de vos données personnelles.",
+      consentLegal:
+        "J'ai lu et j'accepte les mentions légales, notamment la mention relative à la protection des données personnelles.",
+      consentMarketing:
+        "J'accepte que mes données soient utilisées à des fins de prospection commerciale directe.",
     },
     footer: {
       tagline: "Conciergerie & Gestion Immobilière",
@@ -533,6 +551,22 @@ export const content = {
       address: "Property address",
       submit: "Get my free estimate",
       success: "Thank you! Your request has been sent, we will get back to you within 48h.",
+      bedrooms: "Number of bedrooms",
+      bedroomsPlaceholder: "– Choose –",
+      commissionFrom: "From",
+      commissionValue: "18%",
+      commissionCaption: "commission",
+      perks: [
+        "Quality styling and photography",
+        "Optimised occupancy",
+        "Hotel-standard housekeeping",
+        "24/24 guest support",
+        "10 more services included",
+      ],
+      legalNote:
+        "In accordance with law 09-08, you have a right of access, rectification and objection regarding your personal data.",
+      consentLegal: "I have read and accept the legal notice, including personal data protection.",
+      consentMarketing: "I agree that my data may be used for direct commercial prospecting.",
     },
     footer: {
       tagline: "Property Concierge & Management",
@@ -796,6 +830,22 @@ export const content = {
       address: "عنوان العقار",
       submit: "احصل على تقييمك المجاني",
       success: "شكراً لك! تم إرسال طلبك، سنعود إليك داخل 48 ساعة.",
+      bedrooms: "عدد الغرف",
+      bedroomsPlaceholder: "– اختر –",
+      commissionFrom: "ابتداءً من",
+      commissionValue: "18%",
+      commissionCaption: "من العمولة",
+      perks: [
+        "ديكور وصور بجودة عالية",
+        "تحسين نسبة الإشغال",
+        "تنظيف بمعايير فندقية",
+        "خدمة العملاء 24/24",
+        "10 خدمات إضافية أخرى",
+      ],
+      legalNote:
+        "طبقاً للقانون 09-08، لك حق الولوج والتصحيح والاعتراض على معالجة معطياتك الشخصية.",
+      consentLegal: "قرأت وأقبل المعلومات القانونية، بما فيها حماية المعطيات الشخصية.",
+      consentMarketing: "أقبل استعمال معطياتي لأغراض التواصل التجاري المباشر.",
     },
     footer: {
       tagline: "كونسيرج وإدارة عقارية",
@@ -1020,6 +1070,22 @@ export const content = {
       address: "ⵜⴰⵏⵙⴰ ⵏ ⵜⴳⵎⵎⵉ",
       submit: "ⴰⵎⵥ ⴰⵙⵎⵓⵜⵜⴳ ⴱⴰⵟⵍ",
       success: "ⵜⴰⵏⵎⵎⵉⵔⵜ! ⵜⵜⵡⴰⵣⵏ ⵓⵙⵓⵜⵔ ⵏⵏⴽ, ⴰⴷ ⴰⴽ ⵏⵎⵢⴰⵡⴰⴹ ⴳ 48 ⵏ ⵜⵙⵔⴰⴳⵉⵏ.",
+      bedrooms: "ⵓⵟⵟⵓⵏ ⵏ ⵜⵅⴰⵎⵉⵏ",
+      bedroomsPlaceholder: "– ⵙⵜⵉ –",
+      commissionFrom: "ⵙⴳ",
+      commissionValue: "18%",
+      commissionCaption: "ⵏ ⵜⴽⵓⵎⵉⵙⵢⵓⵏ",
+      perks: [
+        "ⴰⵙⵜⴰⵢ ⴷ ⵜⵡⵍⴰⴼⵉⵏ ⵏ ⵜⵖⴰⵔⴰ",
+        "ⴰⵙⵎⵓⵜⵜⴳ ⵏ ⵓⵣⴷⴰⵖ",
+        "ⴰⵙⵖⵓⴷⵓ ⵙ ⵜⵖⴰⵔⴰ ⵏ ⵓⵙⵏⵓⴱⴳ",
+        "ⵜⴰⵏⴰⴼⵓⵜ 24/24",
+        "10 ⵏ ⵜⵏⴰⴼⵓⵜⵉⵏ ⵢⴰⴹⵏ",
+      ],
+      legalNote:
+        "ⵙ ⵓⵙⵏⵜⵍ ⵏ ⵓⵣⵔⴼ 09-08, ⵖⵓⵔⴽ ⴰⵣⵔⴼ ⵏ ⵓⴽⵛⵛⵓⵎ, ⵓⵙⵖⵓⴷⵓ ⴷ ⵓⴳⴷⴰⵍ ⵏ ⵜⵉⵙⴼⴽⴰ ⵏⵏⴽ.",
+      consentLegal: "ⵖⵔⵉⵖ ⴰⵔ ⵇⴱⵍⵖ ⵜⵉⵎⵍⴰⵢⵉⵏ ⵜⵉⵣⵔⴼⴰⵏⵉⵏ.",
+      consentMarketing: "ⵇⴱⵍⵖ ⴰⴷ ⵜⵜⵡⴰⵙⵎⵔⵙⵏⵜ ⵜⵉⵙⴼⴽⴰ ⵏⵏⵓ ⵉ ⵓⵎⵢⴰⵡⴰⴹ ⴰⵙⴱⴱⴰⴱ.",
     },
     footer: {
       tagline: "ⴰⵙⵙⵓⴷⵓ ⴷ ⵓⵙⵡⵓⴷⴷⵓ ⵏ ⵜⴳⵎⵎⵉ",
