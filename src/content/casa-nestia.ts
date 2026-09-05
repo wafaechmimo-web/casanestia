@@ -269,6 +269,13 @@ export const content = {
       commissionFrom: "À partir de",
       commissionValue: "18%",
       commissionCaption: "de commission",
+      perks: [
+        "Déco et photos de qualité",
+        "Occupation optimisée",
+        "Ménage de qualité hôtel",
+        "Service client 24/24",
+        "10 autres services en plus",
+      ],
       legalNote:
         "Conformément à la loi 09-08, vous disposez d'un droit d'accès, de rectification et d'opposition au traitement de vos données personnelles.",
       consentLegal:
@@ -549,6 +556,13 @@ export const content = {
       commissionFrom: "From",
       commissionValue: "18%",
       commissionCaption: "commission",
+      perks: [
+        "Quality styling and photography",
+        "Optimised occupancy",
+        "Hotel-standard housekeeping",
+        "24/24 guest support",
+        "10 more services included",
+      ],
       legalNote:
         "In accordance with law 09-08, you have a right of access, rectification and objection regarding your personal data.",
       consentLegal: "I have read and accept the legal notice, including personal data protection.",
@@ -821,6 +835,13 @@ export const content = {
       commissionFrom: "ابتداءً من",
       commissionValue: "18%",
       commissionCaption: "من العمولة",
+      perks: [
+        "ديكور وصور بجودة عالية",
+        "تحسين نسبة الإشغال",
+        "تنظيف بمعايير فندقية",
+        "خدمة العملاء 24/24",
+        "10 خدمات إضافية أخرى",
+      ],
       legalNote:
         "طبقاً للقانون 09-08، لك حق الولوج والتصحيح والاعتراض على معالجة معطياتك الشخصية.",
       consentLegal: "قرأت وأقبل المعلومات القانونية، بما فيها حماية المعطيات الشخصية.",
@@ -1054,6 +1075,13 @@ export const content = {
       commissionFrom: "ⵙⴳ",
       commissionValue: "18%",
       commissionCaption: "ⵏ ⵜⴽⵓⵎⵉⵙⵢⵓⵏ",
+      perks: [
+        "ⴰⵙⵜⴰⵢ ⴷ ⵜⵡⵍⴰⴼⵉⵏ ⵏ ⵜⵖⴰⵔⴰ",
+        "ⴰⵙⵎⵓⵜⵜⴳ ⵏ ⵓⵣⴷⴰⵖ",
+        "ⴰⵙⵖⵓⴷⵓ ⵙ ⵜⵖⴰⵔⴰ ⵏ ⵓⵙⵏⵓⴱⴳ",
+        "ⵜⴰⵏⴰⴼⵓⵜ 24/24",
+        "10 ⵏ ⵜⵏⴰⴼⵓⵜⵉⵏ ⵢⴰⴹⵏ",
+      ],
       legalNote:
         "ⵙ ⵓⵙⵏⵜⵍ ⵏ ⵓⵣⵔⴼ 09-08, ⵖⵓⵔⴽ ⴰⵣⵔⴼ ⵏ ⵓⴽⵛⵛⵓⵎ, ⵓⵙⵖⵓⴷⵓ ⴷ ⵓⴳⴷⴰⵍ ⵏ ⵜⵉⵙⴼⴽⴰ ⵏⵏⴽ.",
       consentLegal: "ⵖⵔⵉⵖ ⴰⵔ ⵇⴱⵍⵖ ⵜⵉⵎⵍⴰⵢⵉⵏ ⵜⵉⵣⵔⴼⴰⵏⵉⵏ.",
