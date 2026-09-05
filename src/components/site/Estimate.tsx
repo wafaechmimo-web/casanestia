@@ -6,6 +6,7 @@ const BEDROOMS = ["Studio", "1", "2", "3", "4", "5+"];
 
 export function Estimate({ copy }: { copy: Copy }) {
   const c = copy.estimate;
+  const includedServices = copy.services.items;
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
 
@@ -71,28 +72,37 @@ export function Estimate({ copy }: { copy: Copy }) {
             ))}
           </ul>
 
-          <div className="mt-10 flex flex-col gap-6 border border-border bg-background px-6 py-7 sm:flex-row sm:items-center">
-            <div className="shrink-0 text-center sm:text-left">
-              <p className="text-[0.6rem] uppercase tracking-[0.24em] text-muted-foreground">
-                {c.commissionFrom}
-              </p>
-              <p className="font-display text-[2.6rem] leading-none text-primary">
-                {c.commissionValue}
-              </p>
-              <p className="text-[0.7rem] tracking-wide text-muted-foreground">
-                {c.commissionCaption}
-              </p>
+          <div className="zellige-frame mt-10 bg-background px-6 py-8 md:px-8">
+            <div className="relative z-10 flex flex-col gap-7">
+              <div className="flex items-center justify-center gap-5 border-b border-gold/40 pb-7 text-center">
+                <span aria-hidden className="zellige-star" />
+                <div>
+                  <p className="text-[0.6rem] uppercase tracking-[0.24em] text-muted-foreground">
+                    {c.commissionFrom}
+                  </p>
+                  <p className="font-display text-[3.6rem] leading-[0.85] text-primary">
+                    {c.commissionValue}
+                  </p>
+                  <p className="mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-muted-foreground">
+                    {c.commissionCaption}
+                  </p>
+                </div>
+                <span aria-hidden className="zellige-star" />
+              </div>
+              <ol className="grid gap-x-7 gap-y-3 sm:grid-cols-2">
+                {includedServices.map((service, index) => (
+                  <li
+                    key={service}
+                    className="flex items-start gap-3 text-[0.82rem] leading-relaxed text-foreground/85"
+                  >
+                    <span className="font-display text-sm text-primary/80">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{service}</span>
+                  </li>
+                ))}
+              </ol>
             </div>
-            <ul className="space-y-2 border-t border-border pt-5 sm:border-l sm:border-t-0 sm:pl-7 sm:pt-0">
-              {c.perks.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-[0.88rem] text-foreground/85">
-                  <span aria-hidden className="text-primary">
-                    ✓
-                  </span>
-                  {p}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
